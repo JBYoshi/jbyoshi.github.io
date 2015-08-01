@@ -4,13 +4,18 @@
 <title>{{ page.title }}</title>
 </head>
 <body>
-<table border=0 width=100%><tr>
-<td style="background-color: black; color: white;">
+<table id="container" border=0 width=100%>
+<tr>
+<td valign=top style="background-color: black; color: white;">
 <!-- Sidebar -->
 <a href="/">Home</a>
 </td>
-<td>
-{{ content }}
+<td valign=top>{{ content }}</td>
+</tr>
+<tr>
+<td valign=bottom>
+<span align=center style="font-size: 9;">Copyright 2015 JBYoshi</span>
 </td>
-</tr></table>
-<span align=center valign=bottom style="font-size: 9; position: absolute; bottom: 0;">Copyright 2015 JBYoshi</span>
+</tr>
+</table>
+</body></html>

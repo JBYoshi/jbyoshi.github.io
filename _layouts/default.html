@@ -18,23 +18,30 @@
             .content .logo {display: block;}
             
             /* Mobile CSS */
-            @media screen and (max-width:50em) {
+            @media screen and (max-width:30em) {
                 /* Stick sidebar to bottom */
                 body {display: table;}
                 .content {display: table-row; height: auto;}
                 .sidebar {display: table-row; height: 1px;}
             }
             
-            /* Desktop CSS */
-            @media screen and (min-width:50.001em) {
+            /* Tablet CSS */
+            @media screen and (min-width:30.001em) {
                 .sidebar .logo {display: block;}
                 .content .logo {display: none;}
                 
                 /* Sidebar */
-                .content {float: right; width: 80%;}
-                .sidebar {display: table; width: 20%; height: 100%;}
+                .content {float: right; width: 33%;}
+                .sidebar {display: table; width: 67%; height: 100%;}
                 .sidebar .sidebar-main {display: table-row; height: auto;}
                 .sidebar .sidebar-footer {display: table-row; height: 1px;}
+            }
+            
+            /* Desktop CSS */
+            @media screen and (min-width:50em) {
+                /* Sidebar */
+                .content {float: right; width: 80%;}
+                .sidebar {display: table; width: 20%; height: 100%;}
             }
         </style>
         <meta name="viewport" content="width=device-width, initial-scale=1">

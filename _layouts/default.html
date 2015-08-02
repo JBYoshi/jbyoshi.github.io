@@ -6,44 +6,40 @@
             /* Styles */
             html {background-color: green; color: white;}
             a {color: green; text-decoration: none;}
-            .secondary {background-color: black; color: white;}
+            .sidebar {background-color: black; color: white;}
             .footer {font-size: 9px;}
+            
+            html, body {width: 100%; height: 100%; margin: 0pt;}
             
             /* Mobile CSS */
             @media screen and (max-width:480px) {
+                /* Stick sidebar to bottom */
+                body {display: table;}
+                .content {display: table-row; height: auto;}
+                .sidebar {display: table-row; height: 1px;}
             }
             
             /* Desktop CSS */
             @media screen and (min-width:481px) {
                 /* Sidebar */
-                .main>div {display: table; width: 100%; height: 100%;}
-                .main>div>div {display: table-row;}
-                .sidebar {display: table-cell; width: 200px;}
-                .content {display: table-cell;}
+                .content {float: right; margin-left: 200px;}
+                .sidebar {display: table; width: 200px;}
+                .sidebar .sidebar-main {display: table-row; height: auto;}
+                .sidebar .sidebar-footer {display: table-row; height: 1px;}
             }
-            
-            /* Sticky footer */
-            html, body {width: 100%; height: 100%; margin: 0pt;}
-            body {display: table;}
-            .main {display: table-row; height: auto; width: 100%;}
-            .footer {display: table-cell; height: 1px;}
         </style>
     </head>
     <body>
-        <div class=main>
-            <div>
-                <div>
-                    <div class="content">
-                       {{ content }}
-                    </div>
-                    <div class="secondary sidebar">
-                        <a href="/">Home</a>
-                    </div>
-                </div>
-            </div>
+        <div class="content">
+            {{ content }}
         </div>
-        <div class="secondary footer">
-            Copyright 2015 <a href=https://github.com/JBYoshi>JBYoshi</a>
+        <div class="sidebar">
+            <div class="sidebar-main">
+                <a href="/">Home</a>
+            </div>
+            <div class="sidebar-footer">
+                Copyright 2015 <a href=https://github.com/JBYoshi>JBYoshi</a>
+            </div>
         </div>
     </body>
 </html>

@@ -3,32 +3,25 @@
     <head>
         <title>{{ page.title }}</title>
         <style>
-            html, body, .wrap, .wrap>tbody {width: 100%; height: 100%; margin: 0px; border: 0px; padding: 0px;}
+            html, body {width: 100%; height: 100%; margin: 0px; border: 0px; padding: 0px;}
             html {background-color: green; color: white;}
-            table.wrap {border-collapse: collapse;}
             a {color: green; text-decoration: none;}
             .secondary {background-color: black; color: white;}
-            .footer {font-size: 9; align: center;}
+            .sidebar {float: left; min-width: 15%;}
+            .footer {font-size: 9px; align: center;}
         </style>
     </head>
     <body>
-        <table border=0 class=wrap>
-            <colgroup>
-                <col>
-                <col width=*>
-            </colgroup>
-            <tbody>
-                <tr height=*>
-                    <td valign=top class=secondary>
-                        <!-- Sidebar -->
-                        <a href="/">Home</a>
-                    </td>
-                    <td valign=top>{{ content }}</td>
-                </tr>
-                <tr>
-                    <td colspan=2 class="secondary footer">Copyright 2015 <a href=https://github.com/JBYoshi>JBYoshi</a></td>
-                </tr>
-            </tbody>
-        </table>
+        <div>
+            <div class="secondary sidebar">
+                <a href="/">Home</a>
+            </div>
+            <div>
+                {{ content }}
+            </div>
+        </div>
+        <div class="secondary footer">
+            Copyright 2015 <a href=https://github.com/JBYoshi>JBYoshi</a>
+        </div>
     </body>
 </html>

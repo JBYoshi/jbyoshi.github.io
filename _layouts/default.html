@@ -7,9 +7,15 @@
             html {background-color: green; color: white;}
             a {color: green; text-decoration: none;}
             .sidebar {background-color: black; color: white;}
+            .sidebar.main>a {display: block;}
             .sidebar-footer {font-size: 9px;}
+            .logo {width: 32; height: 32;}
             
             html, body {width: 100%; height: 100%; margin: 0pt;}
+            
+            /* Defaults */
+            .sidebar .logo {display: none;}
+            .content .logo {display: block;}
             
             /* Mobile CSS */
             @media screen and (max-width:480px) {
@@ -21,6 +27,9 @@
             
             /* Desktop CSS */
             @media screen and (min-width:481px) {
+                .sidebar .logo {display: block;}
+                .content .logo {display: none;}
+                
                 /* Sidebar */
                 .content {float: right; width: 80%;}
                 .sidebar {display: table; width: 20%; height: 100%;}
@@ -33,12 +42,17 @@
     </head>
     <body>
         <div class="content">
+            <a href="/" style="display: block;" class="logo">
+                <img src="{{ site.github.owner_gravatar_url }}" class="logo">
+            </a>
             {{ content }}
         </div>
         <div class="sidebar">
             <div class="sidebar-main">
-                <img src="{{ site.github.owner_gravatar_url }}" style="width: 32px; height: 32px;"><br>
-                <a href="/">Home</a>
+                <a href="/">
+                    <img src="{{ site.github.owner_gravatar_url }}" class="logo">
+                    Home
+                </a>
             </div>
             <div class="sidebar-footer">
                 Copyright 2015 <a href=https://github.com/JBYoshi>JBYoshi</a>

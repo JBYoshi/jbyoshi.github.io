@@ -6,22 +6,28 @@
             /* Styles */
             html {background-color: green; color: white;}
             a {color: aqua; text-decoration: none;}
-            .sidebar a {color: green;}
-            .sidebar {background-color: black; color: white;}
-            .sidebar.main>a {display: block;}
-            .sidebar-footer {font-size: 9px;}
+            .secondary a {color: green;}
+            .secondary {background-color: black; color: white;}
+            .sidebar>a {display: block;}
+            .footer {font-size: 9px;}
             .logo {width: 32px; height: 32px;}
             
             html, body {width: 100%; height: 100%; margin: 0pt;}
             
+            /* Stick footer to bottom */
+            body {display: table;}
+            .wrap {display: table-row; height: auto;}
+            .footer-wrap {display: table-row; height: 1px;}
+            
             /* Defaults */
             .sidebar .logo {display: none;}
             .content .logo {display: block;}
+            .footer-space {width: 0px;}
             
             /* Mobile CSS */
             @media screen and (max-width:30em) {
                 /* Stick sidebar to bottom */
-                body {display: table;}
+                .main {display: table; width: 100%; height: 100%;}
                 .content {display: table-row; height: auto;}
                 .sidebar {display: table-row; height: 1px;}
             }
@@ -32,10 +38,10 @@
                 .content .logo {display: none;}
                 
                 /* Sidebar */
-                .content {float: right; width: 67%;}
-                .sidebar {display: table; width: 33%; height: 100%;}
-                .sidebar .sidebar-main {display: table-row; height: auto;}
-                .sidebar .sidebar-footer {display: table-row; height: 1px;}
+                .content {position: absolute; top: 0px; bottom: 0px; right: 0px; width: 67%;}
+                .sidebar {position: absolute; top: 0px; bottom: 0px; left: 0px; width: 33%;}
+                .footer-space {display: table-cell; width: 33%;}
+                .footer {display: table-cell;}
             }
             
             /* Desktop CSS */
@@ -43,6 +49,7 @@
                 /* Sidebar */
                 .content {width: 80%;}
                 .sidebar {width: 20%;}
+                .footer-space {width: 20%;}
             }
         </style>
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -50,22 +57,27 @@
         <link rel="apple-touch-icon" href="{{ site.github.owner_gravatar_url }}">
     </head>
     <body>
-        <div class="content">
-            <a href="/" class="logo">
-                <img src="{{ site.github.owner_gravatar_url }}" class="logo">
-            </a>
-            {{ content }}
+        <div class="wrap">
+            <div class="main">
+                <div class="content">
+                    <a href="/" class="logo">
+                        <img src="{{ site.github.owner_gravatar_url }}" class="logo">
+                    </a>
+                    {{ content }}
+                </div>
+                <div class="secondary sidebar">
+                    <a href="/">
+                        <img src="{{ site.github.owner_gravatar_url }}" class="logo">
+                        Home
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="sidebar">
-            <div class="sidebar-main">
-                <a href="/">
-                    <img src="{{ site.github.owner_gravatar_url }}" class="logo">
-                    Home
-                </a>
-            </div>
-            <div class="sidebar-footer">
+        <div class="secondary footer-wrap">
+            <span class="footer-space"></span>
+            <span class="footer">
                 Copyright 2015 <a href=https://github.com/JBYoshi>JBYoshi</a>
-            </div>
+            </span>
         </div>
     </body>
 </html>

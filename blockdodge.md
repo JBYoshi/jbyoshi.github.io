@@ -18,5 +18,5 @@ When two blocks collide, they will explode. The drops from the explosion are jus
 Your score will increase over time. To keep things balanced between players of different screen sizes, your score will increase slower on larger screens.
 
 ### [Downloads](https://github.com/JBYoshi/BlockDodge/releases)
-#### [Issues](https://github.com/JBYoshi/BlockDodge/issues)
-#### [View Source](https://github.com/JBYoshi/BlockDodge)
+[Issues](https://github.com/JBYoshi/BlockDodge/issues)
+[View Source](https://github.com/JBYoshi/BlockDodge)

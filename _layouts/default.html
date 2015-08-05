@@ -22,7 +22,8 @@
             
             /* Defaults */
             .sidebar .logo {display: none; vertical-align: middle;}
-            .content .logo {display: block;}
+            .content .logo {display: inline;}
+            article {display: block;}
             .footer-space {width: 0px;}
             
             /* Mobile CSS */
@@ -65,6 +66,9 @@
                         <img src="{{ site.github.owner_gravatar_url }}" class="logo">
                     </a>
                     <article>
+                        <header>
+                            <h3 style="display: inline;">{{ page.title }}</h3>
+                        </header>
                         {{ content }}
                     </article>
                 </div>

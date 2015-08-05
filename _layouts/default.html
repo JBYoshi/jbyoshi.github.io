@@ -9,7 +9,7 @@
             .secondary a {color: green;}
             .secondary {background-color: black; color: white;}
             .sidebar>a {display: block;}
-            .footer {font-size: 9px;}
+            .footer-wrap footer {font-size: 9px;}
             .logo {width: 32px; height: 32px;}
             
             html, body {width: 100%; height: 100%; margin: 0pt;}
@@ -41,7 +41,7 @@
                 .content {margin-left: 33%; width: 67%;}
                 .sidebar {position: absolute; top: 0px; bottom: 0px; left: 0px; width: 33%;}
                 .footer-space {display: table-cell; width: 33%;}
-                .footer {display: table-cell; padding-left: 33%;}
+                .footer-wrap footer {display: table-cell; padding-left: 33%;}
                 .wrap {position: relative;}
             }
             
@@ -50,7 +50,7 @@
                 /* Sidebar */
                 .content {margin-left: 20%; width: 80%;}
                 .sidebar {width: 20%;}
-                .footer {padding-left: 20%;}
+                .footer-wrap footer {padding-left: 20%;}
             }
         </style>
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -64,20 +64,22 @@
                     <a href="/" class="logo">
                         <img src="{{ site.github.owner_gravatar_url }}" class="logo">
                     </a>
-                    {{ content }}
+                    <article>
+                        {{ content }}
+                    </article>
                 </div>
-                <div class="secondary sidebar">
+                <aside class="secondary sidebar">
                     <a href="/">
                         <img src="{{ site.github.owner_gravatar_url }}" class="logo">
                         Home
                     </a>
-                </div>
+                </aside>
             </div>
         </div>
         <div class="secondary footer-wrap">
-            <span class="footer">
+            <footer>
                 Copyright 2015 <a href=https://github.com/JBYoshi>JBYoshi</a>
-            </span>
+            </footer>
         </div>
     </body>
 </html>

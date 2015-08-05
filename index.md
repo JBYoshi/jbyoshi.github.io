@@ -1,10 +1,9 @@
 ---
 layout: default
-title: JBYoshi's Site
+title: Home
 permalink: /index.html
 ---
 
-#### ATTENTION!
-This is a work in progress. Please report any bugs [here](https://github.com/JBYoshi/jbyoshi.github.io/issues).
+Hello. This is my website. You can find documentation on all my projects here.
 
-Hello. This is my website. You will be able to find documentation on all my projects here when it is finished.
+#### [Website Issues](https://github.com/JBYoshi/jbyoshi.github.io/issues)

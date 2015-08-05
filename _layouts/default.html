@@ -22,25 +22,26 @@
             
             /* Defaults */
             .sidebar .logo {display: none; vertical-align: middle;}
-            .content .logo {display: inline;}
-            article {display: block;}
+            .main .logo {display: inline;}
+            .article>header {display: inline;}
+            .content {display: block;}
             .footer-space {width: 0px;}
             
             /* Mobile CSS */
             @media screen and (max-width:30em) {
                 /* Stick sidebar to bottom */
-                .main {display: table; width: 100%; height: 100%;}
-                .content {display: table-row; height: auto;}
+                .wrap-2 {display: table; width: 100%; height: 100%;}
+                .main {display: table-row; height: auto;}
                 .sidebar {display: table-row; height: 1px;}
             }
             
             /* Tablet CSS */
             @media screen and (min-width:30.001em) {
                 .sidebar .logo {display: inline;}
-                .content .logo {display: none;}
+                .main .logo {display: none;}
                 
                 /* Sidebar */
-                .content {margin-left: 33%; width: 67%;}
+                .main {margin-left: 33%; width: 67%;}
                 .sidebar {position: fixed; top: 0px; bottom: 0px; left: 0px; width: 33%;}
                 .footer-space {display: table-cell; width: 33%;}
                 .footer-wrap footer {display: table-cell; padding-left: 33%;}
@@ -49,7 +50,7 @@
             /* Desktop CSS */
             @media screen and (min-width:50em) {
                 /* Sidebar */
-                .content {margin-left: 20%; width: 80%;}
+                .main {margin-left: 20%; width: 80%;}
                 .sidebar {width: 20%;}
                 .footer-wrap footer {padding-left: 20%;}
             }
@@ -60,8 +61,8 @@
     </head>
     <body>
         <div class="wrap">
-            <div class="main">
-                <div class="content">
+            <div class="wrap-2">
+                <div class="main">
                     <a href="/" class="logo">
                         <img src="{{ site.github.owner_gravatar_url }}" class="logo">
                     </a>
@@ -69,7 +70,7 @@
                         <header>
                             <h3 style="display: inline;">{{ page.title }}</h3>
                         </header>
-                        {{ content }}
+                        <div class="content">{{ content }}</div>
                     </article>
                 </div>
                 <aside class="secondary sidebar">

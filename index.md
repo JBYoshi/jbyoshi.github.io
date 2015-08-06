@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Home
-permalink: /index.html
 ---
 
 Hello. This is my website. You can find documentation on all my projects here.

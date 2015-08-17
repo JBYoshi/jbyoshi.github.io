@@ -10,8 +10,8 @@
             .secondary {background-color: black; color: white;}
             .sidebar>a {display: block;}
             .footer-wrap footer {font-size: 9px;}
-            .logo {width: 32px; height: 32px;}
             .sidebar hr {border: none; height: 1em; padding: 0px; margin: 0px;}
+            h2.title, .title>h2 {margin: 0px; padding: 0px; color: white;}
             
             html, body {width: 100%; height: 100%; margin: 0pt;}
             
@@ -21,8 +21,8 @@
             .footer-wrap {display: table-row; height: 1px;}
             
             /* Defaults */
-            .sidebar .logo {display: none; vertical-align: middle;}
-            .main .logo {display: inline; vertical-align: middle;}
+            .sidebar .title {display: none;}
+            .main .title {display: block;}
             article, article>header {display: inline;}
             .content {display: block;}
             .footer-space {width: 0px;}
@@ -37,8 +37,8 @@
             
             /* Tablet CSS */
             @media screen and (min-width:30.001em) {
-                .sidebar .logo {display: inline;}
-                .main .logo {display: none;}
+                .sidebar .title {display: block;}
+                .main .title {display: none;}
                 
                 /* Sidebar */
                 .main {margin-left: 33%; width: 67%;}
@@ -56,15 +56,13 @@
             }
         </style>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="{{ site.github.owner_gravatar_url }}" />
-        <link rel="apple-touch-icon" href="{{ site.github.owner_gravatar_url }}">
     </head>
     <body>
         <div class="wrap">
             <div class="wrap-2">
                 <div class="main">
-                    <a href="/" class="logo">
-                        <img src="{{ site.github.owner_gravatar_url }}" class="logo">
+                    <a href="/" class="title">
+                        <h2>jbyoshi.github.io</h2>
                     </a>
                     <article>
                         <header>
@@ -75,7 +73,7 @@
                 </div>
                 <aside class="secondary sidebar">
                     <a href="/">
-                        <img src="{{ site.github.owner_gravatar_url }}" class="logo">
+                        <h2 class="title">jbyoshi.github.io</h2>
                         Home
                     </a>
                     <hr>

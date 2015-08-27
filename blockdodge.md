@@ -7,9 +7,10 @@ Block Dodge is a simple game where you try to dodge blocks.
 
 ### Controls
 - Arrow keys: Move
-- Space or Enter: Start, Pause, or Quit
+- Space or Enter: Start/Continue
 - F11: Toggle fullscreen
-- Escape: Pause/Unpause
+- Escape: Pause/Continue
+- Delete: Quit
 
 ### Playing
 When you're playing, new blocks will enter the screen from the sides. They will stay onscreen and will bounce off of the walls. You cannot go offscreen, either; you won't bounce, you'll just stop.

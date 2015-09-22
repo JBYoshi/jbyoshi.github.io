@@ -4,8 +4,8 @@ title: Buzzers
 ---
 
 <center>
-<div id="buzzer-primary" style="width: 100%; font-size: 60;">Hi</div>
-<div id="buzzer-secondary" style="width: 100%; font-size: 40;">Welcome</div>
+<div id="buzzer-primary" style="width: 100%; font-size: 100px;">Hi</div>
+<div id="buzzer-secondary" style="width: 100%; font-size: 40px;">Welcome</div>
 <input id="buzzer-input" type="text" placeholder="Click here to start">
 </center>
 <script>

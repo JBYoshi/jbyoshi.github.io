@@ -7,7 +7,7 @@ title: Buzzers
 <div id="buzzer-primary" style="width: 100%; font-size: 100px;">Loading</div>
 <div id="buzzer-secondary" style="width: 100%; font-size: 40px;">Please wait...</div>
 <input id="buzzer-input" type="text">
-<table id="buzzer-names" style="padding-top: 5em;"><tr><th colspan=2>Buzzer Names</th></tr></div>
+<table id="buzzer-names" style="padding-top: 5em;"><tr><th colspan=2>Buzzer Names</th></tr></table>
 </center>
 <script>
 window.onload = function() {

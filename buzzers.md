@@ -4,25 +4,44 @@ title: Buzzers
 ---
 
 <center>
-<div id="buzzer-primary" style="width: 100%; font-size: 100px;">Hi</div>
-<div id="buzzer-secondary" style="width: 100%; font-size: 40px;">Welcome</div>
-<input id="buzzer-input" type="text" placeholder="Click here to start">
+<div id="buzzer-primary" style="width: 100%; font-size: 100px;">Loading</div>
+<div id="buzzer-secondary" style="width: 100%; font-size: 40px;">Please wait...</div>
+<input id="buzzer-input" type="text">
+<table id="buzzer-names" style="padding-top: 5em;"><tr><th colspan=2>Buzzer Names</th></tr></div>
 </center>
 <script>
-var names = ["Unknown", "Buzzer #1", "Buzzer #2", "Buzzer #3", "Buzzer #4", "Buzzer #5", "Buzzer #6", "Buzzer #7", "Buzzer #8", "Buzzer #9", "Buzzer #10"];
+window.onload = function() {
+var nameFields = new Array();
+var presses = new Array();
 var enabled = false;
 var timer = -1;
 var timerId = 0;
 var primary = document.getElementById("buzzer-primary");
 var secondary = document.getElementById("buzzer-secondary");
 var input = document.getElementById("buzzer-input");
+var lastKeyCode = null;
+
+var nameContainer = document.getElementById("buzzer-names");
+for (var i = 1; i <= 10; i++) {
+    var row = document.createElement("tr");
+    row.innerHTML = "<td>Buzzer #" + i + "</td>";
+    
+    var field = document.createElement("input");
+    field.value = "Buzzer #" + i;
+    nameFields[i] = field;
+    
+    var fieldCell = document.createElement("td");
+    fieldCell.appendChild(field);
+    row.appendChild(fieldCell);
+    nameContainer.appendChild(row);
+}
 
 function buzzer(key) {
     if (!enabled) {
         return;
     }
     enabled = false;
-    primary.innerHTML = names[key];
+    primary.innerHTML = nameFields[key].value;
     timer = 5;
     updateTimer();
 }
@@ -47,50 +66,60 @@ function enable() {
     enabled = true;
     primary.innerHTML = "Ready";
     secondary.innerHTML = "Press a buzzer";
+    input.placeholder = "";
 }
 function disable() {
     reset();
     enabled = false;
     primary.innerHTML = "Disabled";
-    secondary.innerHTML = "Click the space below to begin";
+    secondary.innerHTML = "Click the space below to start";
+    input.placeholder = "Click here to start";
 }
 disable();
 
 input.onfocus = enable;
 input.onblur = disable;
-input.onkeypress = function(event) {
+input.onkeydown = function(event) {
     if (!enabled) {
         return;
     }
-    event.preventDefault();
-    var c;
-    if (event.which == null) {
-	    c = String.fromCharCode(event.keyCode);
-	} else if (event.which!=0 && event.charCode != 0) {
-	    c = String.fromCharCode(event.which);
-	}
-    if (c == "0") {
-        buzzer(10);
-    } else if (c == "1") {
-        buzzer(1);
-    } else if (c == "2") {
-        buzzer(2);
-    } else if (c == "3") {
-        buzzer(3);
-    } else if (c == "4") {
-        buzzer(4);
-    } else if (c == "5") {
-        buzzer(5);
-    } else if (c == "6") {
-        buzzer(6);
-    } else if (c == "7") {
-        buzzer(7);
-    } else if (c == "8") {
-        buzzer(8);
-    } else if (c == "9") {
-        buzzer(9);
+    var key = event.keyCode;
+    if (presses[key]) {
+        return;
+    }
+    presses[key] = true;
+    lastKeyCode = null;
+    var pressed;
+    if (key >= 48 && key <= 57) {
+        pressed = key - 48;
+    } else if (key >= 96 && key <= 105) {
+        pressed = key - 96;
     } else {
-        alert("Unknown key: " + c);
+        lastKeyCode = key;
+        return;
+    }
+    if (pressed == 0) {
+        pressed = 10;
+    }
+    buzzer(pressed);
+}
+input.onkeypress = function(event) {
+    event.preventDefault();
+    if (lastKeyCode != null) {
+        var c;
+        if (event.which == null) {
+            c = String.fromCharCode(event.keyCode);
+        } else if (event.which!=0 && event.charCode != 0) {
+            c = String.fromCharCode(event.which);
+        } else {
+    	    return;
+        }
+        alert("Unknown key: keyCode=" + lastKeyCode + " character='" + c + "'");
+        lastKeyCode = null;
     }
 }
+input.onkeyup = function(event) {
+    presses[event.keyCode] = false;
+}
+};
 </script>

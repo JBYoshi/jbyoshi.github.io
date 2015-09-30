@@ -9,6 +9,14 @@ title: Buzzers
 <input id="buzzer-input" type="text">
 <table id="buzzer-names" style="padding-top: 5em;"><tr><th colspan="2">Buzzer Names</th></tr></table>
 </center>
+<div style="position: absolute; right: 0; top: 0;">
+    <audio id="buzzer-sound" preload="auto">
+        <source src="ding.mp3" type="audio/mpeg">
+        <source src="ding.wav" type="audio/x-wav">
+        <source src="ding.ogg" type="audio/ogg">
+    </audio>
+    <span id="buzzer-debug">Debug</span>
+</div>
 <script>
 window.onload = function() {
 var nameFields = new Array();
@@ -20,6 +28,7 @@ var primary = document.getElementById("buzzer-primary");
 var secondary = document.getElementById("buzzer-secondary");
 var input = document.getElementById("buzzer-input");
 var lastKeyCode = null;
+var sound = document.getElementById("buzzer-sound");
 
 var nameContainer = document.getElementById("buzzer-names");
 for (var i = 1; i <= 10; i++) {
@@ -42,6 +51,8 @@ function buzzer(key) {
     }
     enabled = false;
     primary.innerHTML = nameFields[key].value;
+    sound.currentTime = 0;
+    sound.play();
     timer = 5;
     updateTimer();
 }
@@ -60,6 +71,7 @@ function updateTimer() {
 function reset() {
     timer = 0;
     window.clearTimeout(timerId);
+    sound.pause();
 }
 function enable() {
     reset();
@@ -92,10 +104,13 @@ input.onkeydown = function(event) {
     var pressed;
     if (key >= 48 && key <= 57) {
         pressed = key - 48;
+        document.getElementById("buzzer-debug").innerHTML = "true";
     } else if (key >= 96 && key <= 105) {
         pressed = key - 96;
+        document.getElementById("buzzer-debug").innerHTML = "false";
     } else {
         lastKeyCode = key;
+        document.getElementById("buzzer-debug").innerHTML = "null";
         return;
     }
     if (pressed == 0) {

@@ -15,7 +15,6 @@ title: Buzzers
         <source src="buzzer-sounds/ding.wav" type="audio/x-wav">
         <source src="buzzer-sounds/ding.ogg" type="audio/ogg">
     </audio>
-    <span id="buzzer-debug">Debug</span>
 </div>
 <script>
 window.onload = function() {
@@ -104,13 +103,10 @@ input.onkeydown = function(event) {
     var pressed;
     if (key >= 48 && key <= 57) {
         pressed = key - 48;
-        document.getElementById("buzzer-debug").innerHTML = "true";
     } else if (key >= 96 && key <= 105) {
         pressed = key - 96;
-        document.getElementById("buzzer-debug").innerHTML = "false";
     } else {
         lastKeyCode = key;
-        document.getElementById("buzzer-debug").innerHTML = "null";
         return;
     }
     if (pressed == 0) {

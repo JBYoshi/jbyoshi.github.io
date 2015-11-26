@@ -9,13 +9,11 @@ title: Buzzers
 <input id="buzzer-input" type="text">
 <table id="buzzer-names" style="padding-top: 5em;"><tr><th colspan="2">Buzzer Names</th></tr></table>
 </center>
-<div style="position: absolute; right: 0; top: 0;">
-    <audio id="buzzer-sound" preload="auto">
-        <source src="buzzer-sounds/ding.mp3" type="audio/mpeg">
-        <source src="buzzer-sounds/ding.wav" type="audio/x-wav">
-        <source src="buzzer-sounds/ding.ogg" type="audio/ogg">
-    </audio>
-</div>
+<audio id="buzzer-sound" preload="auto" style="position: absolute;"> <!-- Just to keep it from messing up the layout -->
+    <source src="buzzer-sounds/ding.mp3" type="audio/mpeg">
+    <source src="buzzer-sounds/ding.wav" type="audio/x-wav">
+    <source src="buzzer-sounds/ding.ogg" type="audio/ogg">
+</audio>
 <script>
 window.onload = function() {
 var nameFields = new Array();

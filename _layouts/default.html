@@ -65,7 +65,7 @@
                         <h2>jbyoshi.github.io</h2>
                     </a>
                     <article>
-                        {% if page.skipheader != 'true' %}
+                        {% if page.skipheader == null %}
                             <header>
                                 <h3 style="display: inline;">{{ page.title }}</h3>
                             </header>

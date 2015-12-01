@@ -65,11 +65,11 @@
                         <h2>jbyoshi.github.io</h2>
                     </a>
                     <article>
-                        <header>
-                            {% if page.title != 'none' %}
+                        {% if page.skipheader != 'true' %}
+                            <header>
                                 <h3 style="display: inline;">{{ page.title }}</h3>
-                            {% endif %}
-                        </header>
+                            </header>
+                        {% endif %}
                         <div class="content">{{ content }}</div>
                     </article>
                 </div>

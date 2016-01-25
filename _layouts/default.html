@@ -9,9 +9,11 @@
             .secondary a {color: green;}
             .secondary {background-color: black; color: white;}
             .sidebar>a {display: block;}
+            .sidebar>a.new::before {color: yellow; content: "New ";}
             .footer-wrap footer {font-size: 9px;}
             .sidebar hr {border: none; height: 1em; padding: 0px; margin: 0px;}
             h2.title, .title>h2 {margin: 0px; padding: 0px; color: white;}
+            .border {margin-left: 1em;}
             
             html, body {width: 100%; height: 100%; margin: 0pt;}
             
@@ -56,6 +58,7 @@
             }
         </style>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
     </head>
     <body>
         <div class="wrap">
@@ -81,7 +84,9 @@
                     <hr>
                     <a href="/blockdodge">Block Dodge</a>
                     <a href="/buzzers">Buzzers</a>
-                    <a href="/gradlegrab">Gradle Grab</a>
+                    <a href="/gradlegrab" class="new">Gradle Grab</a>
+                    <hr>
+                    <a href="/blog/" class="new">Blog</a>
                     <hr>
                     <a href="https://github.com/JBYoshi/jbyoshi.github.io">Website Source</a>
                     <a href="https://github.com/JBYoshi/jbyoshi.github.io/issues">Website Issue Tracker</a>

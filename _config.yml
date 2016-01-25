@@ -1,0 +1,11 @@
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+gems:
+ - jekyll-paginate
+paginate: 20
+paginate_path: "/blog/page:num/"
+permalink: /blog/:year/:month/:day/:title

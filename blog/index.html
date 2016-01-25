@@ -1,0 +1,27 @@
+---
+title: Blog
+---
+
+{% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}#bottom">&uarr; Newer Posts</a>
+{% endif %}
+   
+{% for post in paginator.posts %}
+    <div>
+        <h1 style="margin-bottom: 0;"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
+        <p class="desktop border" style="margin-top: 0; margin-bottom: 0;">
+            {{ post.excerpt | remove: '<p>' | remove: '</p>' }}
+            <br>
+            <a href="{{ post.url | prepend: site.baseurl }}">Full post</a>
+        </p>
+    </div>
+{% endfor %}
+
+{% if paginator.previous_page %}
+    <p><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}#bottom">&uarr; Newer Posts</a></p>
+{% endif %}
+    
+{% if paginator.next_page %}
+    <p><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">&darr; Older Posts</a></p>
+{% endif %}
+<a id="bottom"></a>

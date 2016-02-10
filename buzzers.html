@@ -123,12 +123,14 @@ input.onkeypress = function(event) {
         } else {
     	    return;
         }
-        alert("Unknown key: keyCode=" + lastKeyCode + " character='" + c + "'");
+        primary.innerHTML = "Unknown key";
+        secondary.innerHTML = "keyCode = " + lastKeyCode + ", character = '" + c + "'"
         lastKeyCode = null;
     }
 }
 input.onkeyup = function(event) {
     presses[event.keyCode] = false;
 }
+input.focus();
 };
 </script>

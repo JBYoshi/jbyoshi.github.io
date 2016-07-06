@@ -7,11 +7,19 @@ title: Buzzers
 <div id="buzzer-primary" style="width: 100%; font-size: 100px;">Loading</div>
 <div id="buzzer-secondary" style="width: 100%; font-size: 40px;">Please wait...</div>
 <input id="buzzer-input" type="text">
+
 <table id="buzzer-names" style="padding-top: 5em;">
 <tr><th colspan="2">Buzzer Names</th></tr>
-<tr><td colspan="2">To type a number, copy and paste it:</td></tr>
-<tr><td colspan="2">0 1 2 3 4 5 6 7 8 9 10</td></tr>
 </table>
+
+<p>
+<input type="checkbox" id="block-numbers">
+Block buzzers from writing numbers into the text field
+<br>
+To type a number, copy and paste it:
+<br>
+0 1 2 3 4 5 6 7 8 9 10
+</p>
 </center>
 <audio id="buzzer-sound" preload="auto" style="position: absolute;"> <!-- Just to keep it from messing up the layout -->
     <source src="buzzer-sounds/ding.mp3" type="audio/mpeg">
@@ -30,6 +38,7 @@ var secondary = document.getElementById("buzzer-secondary");
 var input = document.getElementById("buzzer-input");
 var lastKeyCode = null;
 var sound = document.getElementById("buzzer-sound");
+var blockNumbers = document.getElementById("block-numbers");
 
 var nameContainer = document.getElementById("buzzer-names");
 for (var i = 1; i <= 10; i++) {
@@ -41,7 +50,7 @@ for (var i = 1; i <= 10; i++) {
     field.onkeypress = function(e) {
         var key;
         if (e.charCode) key = e.charCode; else if (e.which) key = e.which; else key = e.keyCode;
-        if (key >= '0'.charCodeAt(0) && key <= '9'.charCodeAt(0)) {
+        if (key >= '0'.charCodeAt(0) && key <= '9'.charCodeAt(0) && blockNumbers.checked) {
             e.preventDefault();
         }
     }

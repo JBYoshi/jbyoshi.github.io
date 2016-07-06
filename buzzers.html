@@ -7,7 +7,11 @@ title: Buzzers
 <div id="buzzer-primary" style="width: 100%; font-size: 100px;">Loading</div>
 <div id="buzzer-secondary" style="width: 100%; font-size: 40px;">Please wait...</div>
 <input id="buzzer-input" type="text">
-<table id="buzzer-names" style="padding-top: 5em;"><tr><th colspan="2">Buzzer Names</th></tr></table>
+<table id="buzzer-names" style="padding-top: 5em;">
+<tr><th colspan="2">Buzzer Names</th></tr>
+<tr><td colspan="2">To type a number, copy and paste it:</td></tr>
+<tr><td colspan="2">0 1 2 3 4 5 6 7 8 9 10</td></tr>
+</table>
 </center>
 <audio id="buzzer-sound" preload="auto" style="position: absolute;"> <!-- Just to keep it from messing up the layout -->
     <source src="buzzer-sounds/ding.mp3" type="audio/mpeg">
@@ -34,6 +38,13 @@ for (var i = 1; i <= 10; i++) {
     
     var field = document.createElement("input");
     field.value = "Buzzer #" + i;
+    field.onkeypress = function(e) {
+        var key;
+        if (e.charCode) key = e.charCode; else if (e.which) key = e.which; else key = e.keyCode;
+        if (key >= '0'.charCodeAt(0) && key <= '9'.charCodeAt(0)) {
+            e.preventDefault();
+        }
+    }
     nameFields[i] = field;
     
     var fieldCell = document.createElement("td");

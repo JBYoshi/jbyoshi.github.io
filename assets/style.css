@@ -1,0 +1,54 @@
+/* Styles */
+html {background-color: green; color: white; font-family: sans-serif;}
+a {color: aqua; text-decoration: none;}
+.secondary a {color: green;}
+.secondary {background-color: black; color: white;}
+.sidebar>a, .sidebar>header {display: block;}
+.sidebar>.new::before {color: yellow; content: "New ";}
+.footer-wrap footer {font-size: 9px;}
+.sidebar hr {border: none; height: 1em; padding: 0px; margin: 0px;}
+h1.title, .title>h1 {margin: 0px; padding: 0px; color: white;}
+.border {margin-left: 1em;}
+
+html, body {width: 100%; height: 100%; margin: 0pt;}
+header, header>h2 {margin-top: 0;}
+
+/* Stick footer to bottom */
+body {display: table;}
+.wrap {display: table-row; height: auto;}
+.footer-wrap {display: table-row; height: 1px;}
+
+/* Defaults */
+.sidebar .title {display: none;}
+.main .title {display: block;}
+article, article>header {display: inline;}
+.content {display: block;}
+.footer-space {width: 0px;}
+
+/* Mobile CSS */
+@media screen and (max-width:30em) {
+    /* Stick sidebar to bottom */
+    .wrap-2 {display: table; width: 100%; height: 100%;}
+    .main {display: table-row; height: auto;}
+    .sidebar {display: table-row; height: 1px; padding-bottom: 1em;}
+}
+
+/* Tablet CSS */
+@media screen and (min-width:30.001em) {
+    .sidebar .title {display: block;}
+    .main .title {display: none;}
+
+    /* Sidebar */
+    .main {margin-left: 33%; width: 67%;}
+    .sidebar {position: fixed; top: 0px; bottom: 0px; left: 0px; width: 33%;}
+    .footer-space {display: table-cell; width: 33%;}
+    .footer-wrap footer {display: table-cell; padding-left: 33%;}
+}
+
+/* Desktop CSS */
+@media screen and (min-width:50em) {
+    /* Sidebar */
+    .main {margin-left: 20%; width: 80%;}
+    .sidebar {width: 20%;}
+    .footer-wrap footer {padding-left: 20%;}
+}

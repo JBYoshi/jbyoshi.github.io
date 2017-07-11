@@ -1,5 +1,5 @@
 ---
-title: JBYoshi: Spongineer
+title: JBYoshi, Spongineer
 ---
 
 I've been helping with a project called [Sponge](https://spongepowered.org) for some time. I have a few ways to describe it: If you're a developer, Sponge is a community-built API for Minecraft. If you're a Minecraft server owner, Sponge is a server mod and a spiritual successor to Bukkit/Craftbukkit. If you're a general Minecraft player, Sponge is something that server owners use.

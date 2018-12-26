@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
     <head>
         <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
         <meta charset="UTF-8">
@@ -9,22 +9,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <div class="wrap">
-            <div class="wrap-2">
-                <div class="main">
-                    <a href="/" class="title">
-                        <h2>jbyoshi.github.io</h2>
-                    </a>
+            <div id="main">
+                    <h2 class="title"><a href="/">jbyoshi.github.io</h2></a></h2>
                     <article>
                         {% if page.skipheader == null %}
                             <header>
-                                <h2 style="display: inline;">{{ page.title }}</h3>
+                                <h2>{{ page.title }}</h3>
                             </header>
                         {% endif %}
                         <div class="content">{{ content }}</div>
                     </article>
                 </div>
-                <aside class="secondary sidebar">
+            <div id="sidebar" class="secondary">
+                <aside id="sidebar-main">
                     <a href="/">
                         <h1 class="title">jbyoshi.github.io</h2>
                         Home
@@ -42,12 +39,9 @@
                     <a href="https://github.com/JBYoshi/jbyoshi.github.io/issues">Website Issue Tracker</a>
                     <a href="https://github.com/JBYoshi">JBYoshi on GitHub</a>
                 </aside>
+                <footer id="copyright">
+                    Copyright &copy; 2015-2018 JBYoshi.
+                </div>
             </div>
-        </div>
-        <div class="secondary footer-wrap">
-            <footer>
-                Copyright &copy; 2015-2017 JBYoshi.
-            </footer>
-        </div>
     </body>
 </html>

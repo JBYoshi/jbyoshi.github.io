@@ -14,10 +14,17 @@ body {width: 100%; min-height: 100%; margin: 0pt;}
 header, header>h2 {margin-top: 0;}
 
 body {display: flex; flex-direction: column;}
-body>div {padding: 0.5em;}
 #main {flex: 1;}
 
 #sidebar .title {display: none;}
+
+#main, #sidebar {
+    padding: 0.5em;
+    padding-top: max(0.5em, env(safe-area-inset-top));
+    padding-bottom: max(0.5em, env(safe-area-inset-bottom));
+}
+#sidebar {padding-left: max(0.5em, env(safe-area-inset-left));}
+#main {padding-right: max(0.5em, env(safe-area-inset-right));}
 
 /* Misc styles used on various pages */
 .inset-left {margin-left: 1em;}
@@ -29,7 +36,6 @@ body>div {padding: 0.5em;}
     #sidebar .title {display: block;}
     #main .title {display: none;}
     body {flex-direction: row;}
-    #sidebar {order: -1; padding: 0; display: flex; flex-direction: column;}
-    #sidebar-main {flex: 1; padding: 0.5em;}
-    #copyright {padding: 0.5em;}
+    #sidebar {order: -1; display: flex; flex-direction: column;}
+    #sidebar-main {flex: 1;}
 }

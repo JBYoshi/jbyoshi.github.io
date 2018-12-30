@@ -1,30 +1,36 @@
-/* Styles */
+/* Basic Styles */
 html {background-color: #008900; color: white; font-family: sans-serif;}
 a {color: aqua; text-decoration: none;}
-.secondary a {color: #008900;}
-.secondary {background-color: black; color: white;}
-#sidebar-main>a, #sidebar-main>header {display: block;}
+
+/* Headers */
+.site-title, .site-title>a {margin: 0px; padding: 0px; color: white;}
+header {margin-top: 0;}
+header, h1 {font-weight: bold; font-size: 2em;}
+h2 {font-weight: bold; font-size: 1.8em;}
+h3 {font-weight: bold; font-size: 1.55em;}
+h4 {font-weight: bold; font-size: 1.35em;}
+h5 {font-weight: bold; font-size: 1.2em;}
+h6 {font-weight: bold; font-size: 1em;}
+
+/* Sidebar */
+#sidebar {background-color: black; color: white;}
+#sidebar a {color: #008900;}
+#sidebar hr {border: none; height: 1em; padding: 0px; margin: 0px;}
+#sidebar-main>* {display: block; margin-top: 0px; margin-bottom: 0px;}
 #sidebar-main>.new::before {color: yellow; content: "New ";}
 #copyright {font-size: 9px; margin-top: 1em;}
-#sidebar hr {border: none; height: 1em; padding: 0px; margin: 0px;}
-.title, .title>a {margin: 0px; padding: 0px; color: white;}
 
+/* Layout */
 html {width: 100%; height: 100%; margin: 0pt;}
-body {width: 100%; min-height: 100%; margin: 0pt;}
-header, header>h2 {margin-top: 0;}
-
-body {display: flex; flex-direction: column;}
-#main {flex: 1;}
-
-#sidebar .title {display: none;}
-
+body {width: 100%; min-height: 100%; margin: 0pt; display: flex; flex-direction: column;}
 #main, #sidebar {
-    padding: 0.5em;
     padding-top: max(0.5em, env(safe-area-inset-top));
+    padding-left: max(0.5em, env(safe-area-inset-left));
+    padding-right: max(0.5em, env(safe-area-inset-right));
     padding-bottom: max(0.5em, env(safe-area-inset-bottom));
 }
-#sidebar {padding-left: max(0.5em, env(safe-area-inset-left));}
-#main {padding-right: max(0.5em, env(safe-area-inset-right));}
+#main {flex: 1; padding-bottom: 0.5em;}
+#sidebar {padding-top: 0.5em;}
 
 /* Misc styles used on various pages */
 .inset-left {margin-left: 1em;}
@@ -32,10 +38,16 @@ body {display: flex; flex-direction: column;}
 .margin-bottom-0 {margin-bottom: 0;}
 .huge {font-size: 12em;}
 
-@media screen and (min-width:30.001em) {
-    #sidebar .title {display: block;}
-    #main .title {display: none;}
+/* Mobile */
+#sidebar .site-title {display: none;}
+
+/* Desktop */
+@media screen and (min-width:50em) {
+    #sidebar .site-title {display: block;}
+    #main .site-title {display: none;}
     body {flex-direction: row;}
     #sidebar {order: -1; display: flex; flex-direction: column;}
     #sidebar-main {flex: 1;}
+    #main {padding-left: 0.5em; padding-bottom: max(0.5em, env(safe-area-inset-bottom));}
+    #sidebar {padding-right: 0.5em; padding-top: max(0.5em, env(safe-area-inset-top));}
 }

@@ -8,7 +8,7 @@ title: Blog
    
 {% for post in paginator.posts %}
     <div>
-        <h3 class="margin-bottom-0"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
+        <h1 class="margin-bottom-0"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
         <p class="inset-left margin-top-0 margin-bottom-0">
             {{ post.excerpt | remove: '<p>' | remove: '</p>' }}
             <br>

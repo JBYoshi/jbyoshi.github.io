@@ -9,39 +9,39 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     </head>
     <body>
-            <div id="main">
-                    <h2 class="title"><a href="/">jbyoshi.github.io</h2></a></h2>
-                    <article>
-                        {% if page.skipheader == null %}
-                            <header>
-                                <h2>{{ page.title }}</h3>
-                            </header>
-                        {% endif %}
-                        <div class="content">{{ content }}</div>
-                    </article>
-                </div>
-            <div id="sidebar" class="secondary">
-                <aside id="sidebar-main">
-                    <a href="/">
-                        <h1 class="title">jbyoshi.github.io</h2>
-                        Home
-                    </a>
-                    <a href="/blog/">Blog</a>
-                    <hr>
-                    <header>My Projects</header>
-                    <a href="https://spongepowered.org">Sponge</a>
-                    <a href="/blockdodge">Block Dodge</a>
-                    <a href="/buzzers">Buzzers</a>
-                    <a href="/gradlegrab">Gradle Grab</a>
-                    <a href="/textarea/">TextArea</a>
-                    <hr>
-                    <a href="https://github.com/JBYoshi/jbyoshi.github.io">Website Source</a>
-                    <a href="https://github.com/JBYoshi/jbyoshi.github.io/issues">Website Issue Tracker</a>
-                    <a href="https://github.com/JBYoshi">JBYoshi on GitHub</a>
-                </aside>
-                <footer id="copyright">
-                    Copyright &copy; 2015-2018 JBYoshi.
-                </div>
+        <div id="main">
+            <h2 class="title"><a href="/">jbyoshi.github.io</a></h2>
+            <article>
+                {% if page.skipheader == null %}
+                <header>
+                    <h2>{{ page.title }}</h2>
+                </header>
+                {% endif %}
+                <div class="content">{{ content }}</div>
+            </article>
+        </div>
+        <div id="sidebar" class="secondary">
+            <aside id="sidebar-main">
+                <a href="/">
+                    <h2 class="title">jbyoshi.github.io</h2>
+                    Home
+                </a>
+                <a href="/blog/">Blog</a>
+                <hr>
+                <header>My Projects</header>
+                <a href="https://spongepowered.org">Sponge</a>
+                <a href="/blockdodge">Block Dodge</a>
+                <a href="/buzzers">Buzzers</a>
+                <a href="/gradlegrab">Gradle Grab</a>
+                <a href="/textarea/">TextArea</a>
+                <hr>
+                <a href="https://github.com/JBYoshi/jbyoshi.github.io">Website Source</a>
+                <a href="https://github.com/JBYoshi/jbyoshi.github.io/issues">Website Issue Tracker</a>
+                <a href="https://github.com/JBYoshi">JBYoshi on GitHub</a>
+            </aside>
+            <footer id="copyright">
+                Copyright &copy; 2015-2018 JBYoshi.
             </div>
+        </div>
     </body>
 </html>

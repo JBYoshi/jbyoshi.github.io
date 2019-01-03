@@ -15,6 +15,6 @@ Hi! I'm Jonathan Browne, known more commonly across the Internet as JBYoshi. I'm
 - PGP: `E726 40D0 9D0C A9EE A098 79C5 468C 8081 1BCC 9A6A` - saved to the [SKS key pool](https://sks-keyservers.net) (search for `0x1BCC9A6A`)
 - Steam: [link](https://steamcommunity.com/profiles/76561194504664850)
 - Screeps: [JBYoshi](https://screeps.com/a/#!/profile/JBYoshi)
-- Email: Private (12983479+jbyoshi@users.noreply.github.com is used as a placeholder as of January 2, 2018. Prior to then, jbyoshi@users.noreply.github.com was used.)
+- Email: Private (12983479+jbyoshi@users.noreply.github.com is used as a placeholder as of January 2, 2019. Prior to then, jbyoshi@users.noreply.github.com was used.)
 
 I try to keep my email address private. If you need to contact me, send me a private message on the Sponge forums or a direct message on Discord. This is not a comprehensive list either - message me to verify my status on another service.

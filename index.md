@@ -16,5 +16,6 @@ Hi! I'm Jonathan Browne, known more commonly across the Internet as JBYoshi. I'm
 - Steam: [link](https://steamcommunity.com/profiles/76561194504664850)
 - Screeps: [JBYoshi](https://screeps.com/a/#!/profile/JBYoshi)
 - Email: Private (12983479+jbyoshi@users.noreply.github.com is used as a placeholder as of January 2, 2019. Prior to then, jbyoshi@users.noreply.github.com was used.)
+- This is not a comprehensive list. Message me through any of these methods if you want to verify my identity for someplace else.
 
-I try to keep my email address private. If you need to contact me, send me a private message on the Sponge forums or a direct message on Discord. This is not a comprehensive list either - message me to verify my status on another service.
+If you need to contact me, send me a private message on the Sponge forums or a direct message on Discord.

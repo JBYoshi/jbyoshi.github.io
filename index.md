@@ -11,11 +11,10 @@ Hi! I'm Jonathan Browne, known more commonly across the Internet as JBYoshi. I'm
 - GitHub: [JBYoshi](https://github.com/JBYoshi) (permanent ID 12983479)
 - Minecraft (Java Edition): JBYoshi (permanent ID e66b9fa0-3709-47b6-8a04-693fd526add7)
 - Sponge: [JBYoshi](https://forums.spongepowered.org/u/JBYoshi) (permanent ID 5844)
-- Discord: JBYoshi#5551 (permanent ID 225260865295876097) - join the [Sponge Discord server](https://www.spongepowered.org/chat) to message me
+- Discord: JBYoshi#5551 (permanent ID 225260865295876097) - join the [Sponge Discord server](https://www.spongepowered.org/chat) to message me; I don't usually accept random friend requests
 - PGP: `E726 40D0 9D0C A9EE A098 79C5 468C 8081 1BCC 9A6A` - saved to the [SKS key pool](https://sks-keyservers.net) (search for `0x1BCC9A6A`)
 - Steam: [link](https://steamcommunity.com/profiles/76561194504664850)
 - Screeps: [JBYoshi](https://screeps.com/a/#!/profile/JBYoshi)
 - Email: Private (12983479+jbyoshi@users.noreply.github.com is used as a placeholder as of January 2, 2019. Prior to then, jbyoshi@users.noreply.github.com was used.)
-- This is not a comprehensive list. Message me through any of these methods if you want to verify my identity for someplace else.
 
-If you need to contact me, send me a private message on the Sponge forums or a direct message on Discord.
+You can contact me through the Sponge forums or through Discord.

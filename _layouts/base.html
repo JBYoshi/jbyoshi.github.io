@@ -4,13 +4,28 @@
         <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
         <meta charset="UTF-8">
 
-        <title>{{ page.title }} - jbyoshi.github.io</title>
+        <title>{{ page.title }} -
+                {% if jekyll.environment == "development" %}
+                JBYoshi@localhost
+                {% else %}
+                jbyoshi.github.io
+                {% endif %}
+        </title>
         <link rel="stylesheet" href="/assets/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        {% if jekyll.environment == "development" %}
+        <script src="/assets/test.js"></script>
+        {% endif %}
     </head>
     <body>
         <div id="main">
-            <header class="site-title"><a href="/">jbyoshi.github.io</a></header>
+            <header class="site-title"><a href="/">
+                {% if jekyll.environment == "development" %}
+                JBYoshi@localhost
+                {% else %}
+                jbyoshi.github.io
+                {% endif %}
+            </a></header>
             <main>
                 {% if layout.article %}
                 <article>
@@ -26,7 +41,13 @@
         <div id="sidebar" class="secondary">
             <nav id="sidebar-main">
                 <h1 class="site-title">
-                    <a href="/" rel="author">jbyoshi.github.io</a>
+                    <a href="/" rel="author">
+                        {% if jekyll.environment == "development" %}
+                        JBYoshi@localhost
+                        {% else %}
+                        jbyoshi.github.io
+                        {% endif %}
+                    </a>
                 </h1>
                 <a href="/">About Me</a>
                 <a href="/blog/">Blog</a>

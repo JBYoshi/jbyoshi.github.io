@@ -1,7 +1,12 @@
 ---
-layout: default
+layout: base
 ---
 
-<small>{{ page.date | date: "%B %-d, %Y" }}</small>
+<article> <!-- TODO maybe use <main> instead? -->
+    {% if page.skipheader == null %}
+        <header>{{ page.title }}</header>
+    {% endif %}
+    <small>{{ page.date | date: "%B %-d, %Y" }}</small>
+    {{ content }}
+</article>
 
-{{ content }}

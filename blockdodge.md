@@ -1,11 +1,8 @@
 ---
-layout: default
+layout: project
 title: Block Dodge
+repo: JBYoshi/BlockDodge
 ---
-
-[Downloads](https://github.com/JBYoshi/BlockDodge/releases)
-| [Issue Tracker](https://github.com/JBYoshi/BlockDodge/issues)
-| [View Source](https://github.com/JBYoshi/BlockDodge)
 
 Block Dodge is a simple game where you try to dodge blocks.
 

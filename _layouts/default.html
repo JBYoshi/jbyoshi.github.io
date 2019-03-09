@@ -1,44 +1,6 @@
-<!DOCTYPE html>
-<html lang="en-US">
-    <head>
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
-        <meta charset="UTF-8">
+---
+layout: base
+---
 
-        <title>{{ page.title }} - jbyoshi.github.io</title>
-        <link rel="stylesheet" href="/assets/style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    </head>
-    <body>
-        <div id="main">
-            <h2 class="site-title"><a href="/">jbyoshi.github.io</a></h2>
-            <article> <!-- TODO maybe use <main> instead? -->
-                {% if page.skipheader == null %}
-                <header>{{ page.title }}</header>
-                {% endif %}
-                <div class="content">{{ content }}</div>
-            </article>
-        </div>
-        <div id="sidebar" class="secondary">
-            <nav id="sidebar-main">
-                <a href="/" rel="author">
-                    <header class="site-title">jbyoshi.github.io</header>
-                    About Me
-                </a>
-                <a href="/blog/">Blog</a>
-                <a href="https://github.com/JBYoshi">JBYoshi on GitHub</a>
-                <hr>
-                <h1>My Projects</h1>
-                <a href="https://spongepowered.org">Sponge</a>
-                <a href="/blockdodge">Block Dodge</a>
-                <a href="/buzzers">Buzzers</a>
-                <a href="/gradlegrab">Gradle Grab</a>
-                <a href="/textarea/">TextArea</a>
-            </nav>
-            <footer id="copyright">
-                Copyright &copy; 2015-2019 JBYoshi.
-                <a href="https://github.com/JBYoshi/jbyoshi.github.io">Source</a> |
-                <a href="https://github.com/JBYoshi/jbyoshi.github.io/issues">Issues</a>
-            </footer>
-        </div>
-    </body>
-</html>
+<header>{{ page.title }}</header>
+{{ content }}

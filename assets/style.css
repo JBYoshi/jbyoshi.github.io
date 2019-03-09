@@ -3,9 +3,13 @@ html {background-color: #008900; color: white; font-family: sans-serif;}
 a {color: aqua; text-decoration: none;}
 
 /* Headers */
-.site-title, .site-title>a {margin: 0px; padding: 0px; color: white;}
-header {margin-top: 0;}
-header, h1 {font-weight: bold; font-size: 2em;}
+/* IMPORTANT: All Markdown headers are increased by 1 to account for the page header. See header_offset in _config.yml. */
+.site-title, .site-title>a {margin: 0px; padding: 0px; color: white !important;}
+main h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+h1 {font-weight: bold; font-size: 2em;}
 h2 {font-weight: bold; font-size: 1.8em;}
 h3 {font-weight: bold; font-size: 1.55em;}
 h4 {font-weight: bold; font-size: 1.35em;}
@@ -38,6 +42,7 @@ body {width: 100%; min-height: 100%; margin: 0pt; display: flex; flex-direction:
 .margin-top-0 {margin-top: 0;}
 .margin-bottom-0 {margin-bottom: 0;}
 .huge {font-size: 12em;}
+.center {text-align: center;}
 
 /* Mobile */
 #sidebar .site-title {display: none;}

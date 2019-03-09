@@ -15,3 +15,5 @@ gems:
 paginate: 20
 paginate_path: "/blog/page:num/"
 permalink: /blog/:year/:month/:day/:title
+kramdown:
+  header_offset: 1

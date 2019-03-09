@@ -2,9 +2,11 @@
 layout: base
 ---
 
-<header>{{ page.title }}</header>
-<a href="https://github.com/{{ page.repo }}/releases">Downloads</a>
-| <a href="https://github.com/{{ page.repo }}/issues">Issues</a>
-| <a href="https://github.com/{{ page.repo }}">Source Code</a>
+<header>
+    <h1>{{ page.title }}</h1>
+    <a href="https://github.com/{{ page.repo }}/releases">Downloads</a>
+    | <a href="https://github.com/{{ page.repo }}/issues">Issues</a>
+    | <a href="https://github.com/{{ page.repo }}">Source Code</a>
+</header>
 
 {{ content }}

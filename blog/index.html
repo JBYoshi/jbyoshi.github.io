@@ -7,8 +7,8 @@ title: Blog
 {% endif %}
    
 {% for post in paginator.posts %}
-    <div>
-        <h1 class="margin-bottom-0"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
+    <section>
+        <h2 class="margin-bottom-0"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
         <p class="margin-top-0 margin-bottom-0">
             <small>{{ post.date | date: "%B %-d, %Y" }}</small>
             <br>
@@ -16,7 +16,7 @@ title: Blog
             <br>
             <a href="{{ post.url | prepend: site.baseurl }}">Full post</a>
         </p>
-    </div>
+    </section>
 {% endfor %}
 
 {% if paginator.previous_page %}

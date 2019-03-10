@@ -10,10 +10,13 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-gems:
- - jekyll-paginate
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
 paginate: 20
 paginate_path: "/blog/page:num/"
 permalink: /blog/:year/:month/:day/:title
 kramdown:
   header_offset: 1
+title: jbyoshi.github.io
+author: JBYoshi

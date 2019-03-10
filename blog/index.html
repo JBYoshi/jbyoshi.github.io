@@ -2,9 +2,12 @@
 title: Blog
 ---
 
+<p>
+    <a href="/feed.xml">Atom feed</a>
 {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}#bottom">&uarr; Newer Posts</a>
+    | <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}#bottom">&uarr; Newer Posts</a>
 {% endif %}
+</p>
    
 {% for post in paginator.posts %}
     <section>

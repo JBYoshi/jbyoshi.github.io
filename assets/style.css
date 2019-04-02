@@ -1,6 +1,7 @@
 /* Basic Styles */
 html {background-color: #008900; color: white; font-family: sans-serif;}
 a {color: aqua; text-decoration: none;}
+a:hover {text-decoration: underline;}
 
 /* Headers */
 /* IMPORTANT: All Markdown headers are increased by 1 to account for the page header. See header_offset in _config.yml. */
@@ -18,7 +19,7 @@ h6 {font-weight: bold; font-size: 1em;}
 
 /* Sidebar */
 #sidebar {background-color: black; color: white;}
-#sidebar a {color: #008900;}
+#sidebar a {color: inherit;}
 #sidebar hr {border: none; height: 1em; padding: 0px; margin: 0px;}
 #sidebar-main>* {display: block; margin-top: 0px; margin-bottom: 0px;}
 #sidebar-main>.new::before {color: yellow; content: "New ";}

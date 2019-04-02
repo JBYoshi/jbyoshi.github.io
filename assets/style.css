@@ -19,7 +19,7 @@ h6 {font-weight: bold; font-size: 1em;}
 
 /* Sidebar */
 #sidebar {background-color: black; color: white;}
-#sidebar a {color: inherit;}
+#sidebar a {color: #008900;}
 #sidebar hr {border: none; height: 1em; padding: 0px; margin: 0px;}
 #sidebar-main>* {display: block; margin-top: 0px; margin-bottom: 0px;}
 #sidebar-main>.new::before {color: yellow; content: "New ";}

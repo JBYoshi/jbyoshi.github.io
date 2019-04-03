@@ -44,6 +44,7 @@ body {width: 100%; min-height: 100%; margin: 0pt; display: flex; flex-direction:
 .margin-bottom-0 {margin-bottom: 0;}
 .huge {font-size: 12em;}
 .center {text-align: center;}
+.social-logo {height: 1em;}
 
 /* Mobile */
 #sidebar .site-title {display: none;}

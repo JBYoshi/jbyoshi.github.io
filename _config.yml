@@ -19,4 +19,4 @@ permalink: /blog/:year/:month/:day/:title
 kramdown:
   header_offset: 1
 title: jbyoshi.github.io
-author: JBYoshi
+author: Jonathan Browne

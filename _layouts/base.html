@@ -6,10 +6,9 @@
 
         <title>{{ page.title }} -
                 {% if jekyll.environment == "development" %}
-                JBYoshi@localhost
-                {% else %}
-                jbyoshi.github.io
+                [DEV]
                 {% endif %}
+                {{ site.title }}
         </title>
         <link rel="stylesheet" href="/assets/style.css">
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
@@ -22,10 +21,9 @@
         <div id="main">
             <header class="site-title"><a href="/">
                 {% if jekyll.environment == "development" %}
-                JBYoshi@localhost
-                {% else %}
-                jbyoshi.github.io
+                [DEV]
                 {% endif %}
+                {{ site.title }}
             </a></header>
             <main>
                 {% if layout.article %}
@@ -44,10 +42,9 @@
                 <h1 class="site-title">
                     <a href="/" rel="author">
                         {% if jekyll.environment == "development" %}
-                        JBYoshi@localhost
-                        {% else %}
-                        jbyoshi.github.io
+                        [DEV]
                         {% endif %}
+                        {{ site.title }}
                     </a>
                 </h1>
                 <a href="/">About Me</a>
@@ -76,7 +73,7 @@
                 </a>
             </nav>
             <footer id="copyright">
-                Copyright &copy; 2015-2019 JBYoshi.
+                Copyright &copy; 2015-2019 {{ site.author }}.
                 <a href="https://github.com/JBYoshi/jbyoshi.github.io">Source</a> |
                 <a href="https://github.com/JBYoshi/jbyoshi.github.io/issues">Issues</a>
                 <br>

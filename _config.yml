@@ -20,3 +20,4 @@ kramdown:
   header_offset: 1
 title: jbyoshi.github.io
 author: Jonathan Browne
+exclude: ["Gemfile", "Gemfile.lock", "*.sh", "README.md", "assets/3rdparty/README.txt"]

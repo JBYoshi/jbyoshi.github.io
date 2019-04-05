@@ -30,10 +30,10 @@ html {width: 100%; height: 100%; margin: 0pt;}
 body {width: 100%; min-height: 100%; margin: 0pt; display: flex; flex-direction: column;}
 #main, #sidebar {
     /* Same entry repeats twice since some browsers break on env()  */
-    padding-top: 0.5em; padding-top: max(0.5em, env(safe-area-inset-top));
-    padding-left: 0.5em; padding-left: max(0.5em, env(safe-area-inset-left));
-    padding-right: 0.5em; padding-right: max(0.5em, env(safe-area-inset-right));
-    padding-bottom: 0.5em; padding-bottom: max(0.5em, env(safe-area-inset-bottom));
+    padding-top: 0.5em; padding-top: calc(0.5em + env(safe-area-inset-top));
+    padding-left: 0.5em; padding-left: calc(0.5em + env(safe-area-inset-left));
+    padding-right: 0.5em; padding-right: calc(0.5em + env(safe-area-inset-right));
+    padding-bottom: 0.5em; padding-bottom: calc(0.5em + env(safe-area-inset-bottom));
 }
 #main {flex: 1; padding-bottom: 0.5em;}
 #sidebar {padding-top: 0.5em;}
@@ -58,6 +58,6 @@ body {width: 100%; min-height: 100%; margin: 0pt; display: flex; flex-direction:
     #sidebar {order: -1; display: flex; flex-direction: column;}
     #sidebar-main {flex: 1;}
     /* Intentional duplication */
-    #main {padding-left: 0.5em; padding-bottom: 0.5em; padding-bottom: max(0.5em, env(safe-area-inset-bottom));}
-    #sidebar {padding-right: 0.5em; padding-top: 0.5em; padding-top: max(0.5em, env(safe-area-inset-top));}
+    #main {padding-left: 0.5em; padding-bottom: 0.5em; padding-bottom: calc(0.5em + env(safe-area-inset-bottom));}
+    #sidebar {padding-right: 0.5em; padding-top: 0.5em; padding-top: calc(0.5em + env(safe-area-inset-top));}
 }

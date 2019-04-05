@@ -4,7 +4,7 @@ title: Gradle Grab
 repo: JBYoshi/GradleGrab
 ---
 
-Gradle Grab is a simple, automatically-updating Gradle installation.
+Gradle Grab is a simple, automatically-updating Gradle installation for Windows.
 
 Just download it and add `gradle.exe` to your PATH.
 

@@ -75,7 +75,7 @@ function getOutline(useHtml5Elements) {
                 if (header === undefined) {
                     header = element;
                 } else {
-                    while (headingLevels.length > 1 && headingLevels[headingLevels.length - 1] <= getH(element)) {
+                    while (headingLevels.length > 0 && headingLevels[headingLevels.length - 1] >= getH(element)) {
                         headingLevels.pop();
                         outline.endSection();
                     }

@@ -8,3 +8,5 @@ Hi! I'm Jonathan Browne. I'm a proficient computer programmer and video game ent
 I am most known for my work on [Sponge](https://www.spongepowered.org), a plugin API for the video game Minecraft, where I go by the username JBYoshi. I have contributed to Sponge since [June 2015](https://github.com/SpongePowered/SpongeCommon/pull/72), and became a core developer in [July 2017](https://discordapp.com/channels/142425412096491520/303772747907989504/333800036024451073). I continue to be involved with Sponge to this day.
 
 In my spare time, I play video games like [Screeps](https://screeps.com), or research new and emerging technologies like encryption, VR, and artificial intelligence.
+
+> "What that boils down to is, if you see something wrong and do nothing about it, the opensource system hasnt failed you, *you* have failed the opensource system." - [Cameron Riley, Apache Jakarta](http://jakarta.apache.org/site/understandingopensource.html)

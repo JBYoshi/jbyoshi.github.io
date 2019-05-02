@@ -9,4 +9,4 @@ I am most known for my work on [Sponge](https://www.spongepowered.org), a plugin
 
 In my spare time, I play video games like [Screeps](https://screeps.com), or research new and emerging technologies like encryption, VR, and artificial intelligence.
 
-> "What that boils down to is, if you see something wrong and do nothing about it, the opensource system hasnt failed you, *you* have failed the opensource system." - [Cameron Riley, Apache Jakarta](http://jakarta.apache.org/site/understandingopensource.html)
+> "...if you see something wrong and do nothing about it, the opensource system hasnt failed you, *you* have failed the opensource system." - [Cameron Riley, Apache Jakarta](http://jakarta.apache.org/site/understandingopensource.html)

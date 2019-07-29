@@ -4,7 +4,7 @@ title: C/C++/Objective-C/Java Comment Tricks
 
 Today, I was working on a bit of code that I wanted to switch between two versions quickly. So I used a few commenting tricks to do it.
 
-# 1: End a comment, if it exists
+## 1: End a comment, if it exists
 
 ```c
 //*/
@@ -25,7 +25,7 @@ int endOfMultiLineComment = 0;
 int notCommented = 0;
 ```
 
-# 2: Toggle comments
+## 2: Toggle comments
 
 ```c
 /*/
@@ -43,7 +43,7 @@ Commented out
 int endOfComment = 0;
 ```
 
-# 3: Not the start of a comment
+## 3: Not the start of a comment
 
 ```c
 //*

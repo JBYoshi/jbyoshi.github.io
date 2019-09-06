@@ -1,7 +1,9 @@
-/* Basic Styles */
+/* Colors */
 html {background-color: #008900; color: white; font-family: sans-serif;}
 a {color: aqua; text-decoration: none;}
 a:hover {text-decoration: underline;}
+#sidebar {background-color: black; color: white;}
+#sidebar a {color: #008900;}
 
 /* Headers */
 .site-title, .site-title>a {margin: 0px; padding: 0px; color: white !important;}
@@ -17,8 +19,6 @@ h5 {font-weight: bold; font-size: 1.2em;}
 h6 {font-weight: bold; font-size: 1em;}
 
 /* Sidebar */
-#sidebar {background-color: black; color: white;}
-#sidebar a {color: #008900;}
 #sidebar hr {border: none; height: 1em; padding: 0px; margin: 0px;}
 #sidebar-main>* {display: block; margin-top: 0.1em; margin-bottom: 0px;}
 #sidebar-main>.site-title {margin-top: 0px;}

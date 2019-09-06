@@ -47,23 +47,7 @@
                         {{ site.title }}
                     </a>
                 </h1>
-                <a href="/">About Me</a>
-                <a href="/blog/">Blog</a>
-                <hr>
-                <h2>My Projects</h2>
-                <a href="https://spongepowered.org">Sponge</a>
-                <a href="/blockdodge">Block Dodge</a>
-                <a href="https://screeps.com/a/#!/profile/JBYoshi">JBYoshi on Screeps</a>
-                <a href="https://ore.spongepowered.org/JBYoshi/Sudo">Sudo for Sponge</a>
-                <a href="https://jbyoshi.github.io/textarea">TextArea</a>
-                <hr>
-                <h2>Archived Projects</h2>
-                <a href="https://jbyoshi.github.io/buzzers">Buzzers</a>
-                <a href="https://github.com/JBYoshi/GitUpdate">GitUpdate</a>
-                <a href="/gradlegrab">Gradle Grab</a>
-                <a href="/offline-project">Offline</a>
-                <a href="https://github.com/JBYoshi/Pickaxe">Pickaxe</a>
-                <hr>
+                {% include nav.html %}
                 <h2>Online Profiles</h2>
                 <a class="social-text" href="https://github.com/JBYoshi" {% if page.relme %}rel=me{% endif %}>
                     <img src="/assets/3rdparty/github.svg" class="social-logo" alt="GitHub">JBYoshi

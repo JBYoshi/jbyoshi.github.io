@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/jbyoshi
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://jbyoshi.github.io
+  * I am jbyoshi (https://keybase.io/jbyoshi) on keybase.
+  * I have a public key ASCkvs7Xzp9YKLsZo_HCnYmNss1sahoHM8jBGJgqsqkXHAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120a4beced7ce9f5828bb19a3f1c29d898db2cd6c6a1a0733c8c118982ab2a9171c0a",
+      "host": "keybase.io",
+      "kid": "0120a4beced7ce9f5828bb19a3f1c29d898db2cd6c6a1a0733c8c118982ab2a9171c0a",
+      "uid": "0543cf96fb7569487993da788d7c8919",
+      "username": "jbyoshi"
+    },
+    "merkle_root": {
+      "ctime": 1570324943,
+      "hash": "41fa098d8f34716ee65b6baab5a431b9d022de24890b6628e4654a317b7817c03ef88a62b30f3ab1b491148a8ee6e3fc4159baa5c072d73a4cf45b433f953189",
+      "hash_meta": "dd92faecf10b2a75bea33cc4a7aae5340eb121d6b0c0700273eb0c9347c52775",
+      "seqno": 7879896
+    },
+    "service": {
+      "entropy": "+MlIB5axyjYYI74HzqTGapqk",
+      "hostname": "jbyoshi.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "4.5.0"
+  },
+  "ctime": 1570324962,
+  "expire_in": 504576000,
+  "prev": "8c7f2a5667108e0f3a7e373ae61f4d5b4d166a60c079c7e726ad03ec9ca39b15",
+  "seqno": 13,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgpL7O186fWCi7GaPxwp2JjbLNbGoaBzPIwRiYKrKpFxwKp3BheWxvYWTESpcCDcQgjH8qVmcQjg86fjc65h9NW00WamDAecfnJq0D7JyjmxXEILuQefWxQxM40001SKp9L8PJumKTT50Iv5C0ekPqqIcTAgHCo3NpZ8RAYaeYYjPNFsiNq+9ErsRAeLnYkN0zaOJoaH6WhMjULUGLIl+GkuBpJFTsWoLDnt3XqaHzqApWDreNMfCEyNGADKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIEoCjA5J3Yt9wbJjZm15B+c3b/P9TSSYF9316vwLik4Io3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jbyoshi
+
+==================================================================

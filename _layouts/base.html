@@ -19,6 +19,10 @@
         {% if jekyll.environment == "development" %}
         <script src="{{ site.baseurl }}/assets/test.js"></script>
         {% endif %}
+        {% if page.relme %}
+        <link rel="openid.delegate" href="{{ site.baseurl }}" />
+        <link rel="openid.server" href="https://indieauth.com/openid" />
+        {% endif %}
     </head>
     <body>
         <div id="main">
@@ -53,16 +57,16 @@
                 {% include nav.html %}
                 <hr>
                 <h2>Online Profiles</h2>
-                <a class="social-text" href="https://github.com/JBYoshi" {% if page.relme %}rel=me{% endif %}>
+                <a class="social-text" href="https://github.com/JBYoshi" {% if page.relme %}rel="me"{% endif %}>
                     GitHub
                 </a>
-                <a class="social-text" href="https://linkedin.com/in/jonathan-browne" {% if page.relme %}rel=me{% endif %}>
+                <a class="social-text" href="https://linkedin.com/in/jonathan-browne" {% if page.relme %}rel="me"{% endif %}>
                     LinkedIn
                 </a>
-                <a class="social-text" href="https://glitch.com/@JBYoshi" {% if page.relme %}rel=me{% endif %}>
+                <a class="social-text" href="https://glitch.com/@JBYoshi" {% if page.relme %}rel="me"{% endif %}>
                     Glitch
                 </a>
-                <a class="social-text" href="https://keybase.io/jbyoshi" {% if page.relme %}rel=me{% endif %}>
+                <a class="social-text" href="https://keybase.io/jbyoshi" {% if page.relme %}rel="me"{% endif %}>
                     Keybase
                 </a>
                 <a class="social-text" href="https://discord.gg/sponge">
@@ -70,7 +74,7 @@
                 </a>
                 <hr>
                 <span>
-                    PGP (sign-only, <a class="social-text" href="{{ site.baseurl }}/pgp-key.txt" {% if page.relme %}rel=pgpkey{% endif %}>download</a>):
+                    PGP (sign-only, <a class="social-text" href="{{ site.baseurl }}/pgp-key.txt" {% if page.relme %}rel="pgpkey"{% endif %}>download</a>):
                     <br>
                     <code>E726 40D0 9D0C A9EE A098<br>79C5 468C 8081 1BCC 9A6A</code>
                 </span>

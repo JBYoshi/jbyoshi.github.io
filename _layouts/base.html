@@ -4,7 +4,10 @@
         <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
         <meta charset="UTF-8">
 
-        <title>{{ page.title }} -
+        <title>
+                {%if page.title %}
+                {{ page.title }} -
+                {% endif %}
                 {% if jekyll.environment == "development" %}
                 [DEV]
                 {% endif %}
@@ -15,7 +18,7 @@
         <link rel="stylesheet" href="{{ site.baseurl }}/{{ site.styleoverride }}">
         {% endif %}
         <link rel="alternate" type="application/rss+xml" href="{{ site.baseurl }}/feed.xml" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         {% if jekyll.environment == "development" %}
         <script src="{{ site.baseurl }}/assets/test.js"></script>
         {% endif %}
@@ -25,13 +28,13 @@
         {% endif %}
     </head>
     <body>
+        <div id="site-header">
+            <h1 class="site-title"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
+            <nav>
+                {% include nav.html %}
+            </nav>
+        </div>
         <div id="main">
-            <header class="site-title"><a href="{{ site.baseurl }}/">
-                {% if jekyll.environment == "development" %}
-                [DEV]
-                {% endif %}
-                {{ site.title }}
-            </a></header>
             <main>
                 {% if layout.article %}
                 <article>
@@ -44,46 +47,18 @@
                 {% endif %}
             </main>
         </div>
-        <aside id="sidebar" class="secondary">
-            <nav id="sidebar-main">
-                <h1 class="site-title">
-                    <a href="{{ site.baseurl }}/" rel="author">
-                        {% if jekyll.environment == "development" %}
-                        [DEV]
-                        {% endif %}
-                        {{ site.title }}
-                    </a>
-                </h1>
-                {% include nav.html %}
-                <hr>
-                <h2>Online Profiles</h2>
-                <a class="social-text" href="https://github.com/JBYoshi" {% if page.relme %}rel="me"{% endif %}>
-                    GitHub
-                </a>
-                <a class="social-text" href="https://linkedin.com/in/jonathan-browne" {% if page.relme %}rel="me"{% endif %}>
-                    LinkedIn
-                </a>
-                <a class="social-text" href="https://glitch.com/@JBYoshi" {% if page.relme %}rel="me"{% endif %}>
-                    Glitch
-                </a>
-                <a class="social-text" href="https://keybase.io/jbyoshi" {% if page.relme %}rel="me"{% endif %}>
-                    Keybase
-                </a>
-                <a class="social-text" href="https://discord.gg/sponge">
-                    Discord: JBYoshi#5551
-                </a>
-                <hr>
-                <span>
-                    PGP (sign-only, <a class="social-text" href="{{ site.baseurl }}/pgp-key.txt" {% if page.relme %}rel="pgpkey"{% endif %}>download</a>):
-                    <br>
-                    <code>E726 40D0 9D0C A9EE A098<br>79C5 468C 8081 1BCC 9A6A</code>
-                </span>
-            </nav>
-            <footer id="copyright">
-                Copyright &copy; 2015-2019 {{ site.author }}.
-                <a href="https://github.com/JBYoshi/jbyoshi.github.io">Source</a> |
-                <a href="https://github.com/JBYoshi/jbyoshi.github.io/issues">Issues</a>
-            </footer>
-        </aside>
+        <footer id="site-footer">
+            <p>
+                Copyright &copy; 2015-2020 {{ site.author }}.
+            </p>
+            <p>
+                <a href="https://github.com/JBYoshi" {% if page.relme %}rel="me"{% endif %}>GitHub</a> |
+                <a href="https://linkedin.com/in/jonathan-browne" {% if page.relme %}rel="me"{% endif %}>LinkedIn</a> |
+                <a href="https://glitch.com/@JBYoshi" {% if page.relme %}rel="me"{% endif %}>Glitch</a> |
+                <a href="https://keybase.io/jbyoshi" {% if page.relme %}rel="me"{% endif %}>Keybase</a> |
+                <a href="https://discord.gg/sponge">Discord</a> |
+                <a href="{{ site.baseurl }}/pgp-key.txt" {% if page.relme %}rel="pgpkey"{% endif %}>PGP</a>
+            </p>
+        </footer>
     </body>
 </html>

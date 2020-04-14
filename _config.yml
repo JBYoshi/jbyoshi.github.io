@@ -16,6 +16,6 @@ plugins:
 paginate: 20
 paginate_path: "/blog/page:num/"
 permalink: /blog/:year/:month/:day/:title
-title: jbyoshi.github.io
+title: Jonathan Browne
 author: Jonathan Browne
 exclude: ["Gemfile", "Gemfile.lock", "*.sh", "README.md", "assets/3rdparty/README.txt"]

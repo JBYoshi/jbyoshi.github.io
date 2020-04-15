@@ -11,10 +11,9 @@ title: Blog
    
 {% for post in paginator.posts %}
     <section>
-        <h2 class="margin-bottom-0"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-        <p class="margin-top-0">
-            <small>{{ post.date | date: "%B %-d, %Y" }}</small>
-            <br>
+        <h2 class="post-title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+        <small>{{ post.date | date: "%B %-d, %Y" }}</small>
+        <p>
             {{ post.excerpt | remove: '<p>' | remove: '</p>' }}
             <br>
             <a href="{{ post.url | prepend: site.baseurl }}">Full post</a>

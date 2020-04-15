@@ -28,25 +28,15 @@
         {% endif %}
     </head>
     <body>
-        <div id="site-header">
+        <header id="site-header">
             <h1 class="site-title"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
             <nav>
                 {% include nav.html %}
             </nav>
-        </div>
-        <div id="main">
-            <main>
-                {% if layout.article %}
-                <article>
-                    {{content}}
-                </article>
-                {% else %}
-                <section>
-                    {{ content }}
-                </section>
-                {% endif %}
-            </main>
-        </div>
+        </header>
+        <main>
+            {{content}}
+        </main>
         <footer id="site-footer">
             <p>
                 Copyright &copy; 2015-2020 {{ site.author }}.

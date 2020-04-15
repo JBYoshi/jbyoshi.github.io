@@ -1,6 +1,8 @@
 /* Colors */
-html {background-color: white; color: black; font-family: sans-serif;}
-a {color: #008900; text-decoration: none;}
+html {background-color: #008900; color: white; font-family: sans-serif;}
+a {color: white; text-decoration: none;}
+main {background-color: white; color: black;}
+main a {color: #008900;}
 a:hover {text-decoration: underline;}
 
 /* Headers */
@@ -29,12 +31,12 @@ footer {text-align: center;}
 
 /* Layout */
 html {width: 100%; height: 100%; margin: 0pt;}
-body {width: 100%; min-height: 100%; margin: 0pt; display: flex; flex-direction: column; box-sizing: border-box; padding: 1em;}
+body {width: 100%; min-height: 100%; margin: 0pt; display: flex; flex-direction: column; box-sizing: border-box;}
 main {
     flex: 1 0 auto;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    padding: 1em;
 }
+#site-header, #site-footer {padding: 1em;}
 #site-footer p:first-child {margin-top: 0;}
 #site-footer p:last-child {margin-bottom: 0;}
 

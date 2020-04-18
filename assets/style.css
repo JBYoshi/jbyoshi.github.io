@@ -23,7 +23,7 @@ h6 {font-weight: bold; font-size: 1em;}
 
 /* Header */
 #site-header h1 {font-size: 2em;}
-#site-header nav {margin-top: 0.5em; margin-bottom: 0.5em;}
+#site-header nav {margin-top: 1em;}
 #site-header nav a {margin-right: 0.5em;}
 
 /* Footer */
@@ -48,5 +48,6 @@ a.social {text-decoration: none !important; margin-left: 0.25em; margin-right: 0
 
 /* Desktop */
 @media screen and (min-width:50em) {
-    #site-header {display: flex; flex-direction: row; justify-content: space-between;}
+    #site-header {display: flex; flex-direction: row; align-items: center; justify-content: space-between;}
+    #site-header nav {margin-top: 0;}
 }

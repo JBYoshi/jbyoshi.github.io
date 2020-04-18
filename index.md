@@ -32,3 +32,10 @@ Plugins I've written for Sponge:
 * [GradleGrab](https://github.com/JBYoshi/GradleGrab) - An automatically-updating Gradle installation.
 
 For other projects, see my profiles on [GitHub](https://github.com/JBYoshi) or [Glitch](https://glitch.com/@JBYoshi).
+
+## Contact
+
+The best ways to get in touch with me are:
+
+* [LinkedIn](https://linkedin.com/in/jonathan-browne)
+* Discord: JBYoshi#5551 (I don't usually accept friend requests; join the [Sponge Discord server](https://discord.gg/sponge) to message me)

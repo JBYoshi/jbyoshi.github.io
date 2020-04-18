@@ -44,7 +44,7 @@ main {
 .post-title {margin-bottom: 0;}
 .copyright {font-size: 0.7em;}
 a.social {text-decoration: none !important; margin-left: 0.25em; margin-right: 0.25em;}
-.social img {width: 1em; height: 1em;}
+.social img {width: 1.5em; height: 1.5em;}
 
 /* Desktop */
 @media screen and (min-width:50em) {

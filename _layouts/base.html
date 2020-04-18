@@ -20,7 +20,7 @@
         <link rel="alternate" type="application/rss+xml" href="{{ site.baseurl }}/feed.xml" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         {% if jekyll.environment == "development" %}
-        <script src="{{ site.baseurl }}/assets/test.js"></script>
+        <script src="{{ site.baseurl }}/assets/test.js" defer></script>
         {% endif %}
         {% if page.relme %}
         <link rel="openid.delegate" href="{{ site.baseurl }}" />

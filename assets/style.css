@@ -42,6 +42,9 @@ main {
 
 /* Misc styles used on various pages */
 .post-title {margin-bottom: 0;}
+.copyright {font-size: 0.7em;}
+a.social {text-decoration: none !important;}
+.social img {width: 1em; height: 1em; padding-left: 0.25em; padding-right: 0.25em;}
 
 /* Desktop */
 @media screen and (min-width:50em) {

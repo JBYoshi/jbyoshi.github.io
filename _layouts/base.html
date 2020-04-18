@@ -38,16 +38,28 @@
             {{content}}
         </main>
         <footer id="site-footer">
-            <p>
+            <p class="copyright">
                 Copyright &copy; 2015-2020 {{ site.author }}.
             </p>
             <p>
-                <a href="https://github.com/JBYoshi" {% if page.relme %}rel="me"{% endif %}>GitHub</a> |
-                <a href="https://linkedin.com/in/jonathan-browne" {% if page.relme %}rel="me"{% endif %}>LinkedIn</a> |
-                <a href="https://glitch.com/@JBYoshi" {% if page.relme %}rel="me"{% endif %}>Glitch</a> |
-                <a href="https://keybase.io/jbyoshi" {% if page.relme %}rel="me"{% endif %}>Keybase</a> |
-                <a href="https://discord.gg/sponge">Discord</a> |
-                <a href="{{ site.baseurl }}/pgp-key.txt" {% if page.relme %}rel="pgpkey"{% endif %}>PGP</a>
+                <a href="https://github.com/JBYoshi" class="social" {% if page.relme %}rel="me"{% endif %}>
+                    <img src="{{ site.baseurl }}/assets/3rdparty/github-white.svg" alt="GitHub">
+                </a>
+                <a href="https://linkedin.com/in/jonathan-browne" class="social" {% if page.relme %}rel="me"{% endif %}>
+                    <img src="{{ site.baseurl }}/assets/3rdparty/linkedin-white.svg" alt="LinkedIn">
+                </a>
+                <a href="https://glitch.com/@JBYoshi" class="social" {% if page.relme %}rel="me"{% endif %}>
+                    <img src="{{ site.baseurl }}/assets/3rdparty/glitch-white.svg" alt="Glitch">
+                </a>
+                <a href="https://keybase.io/jbyoshi" class="social" {% if page.relme %}rel="me"{% endif %}>
+                    <img src="{{ site.baseurl }}/assets/3rdparty/keybase-white.svg" alt="Keybase">
+                </a>
+                <a href="https://discord.gg/sponge" class="social">
+                    <img src="{{ site.baseurl }}/assets/3rdparty/discord-white.svg" alt="Discord">
+                </a>
+                <a href="{{ site.baseurl }}/pgp-key.txt" class="social" {% if page.relme %}rel="pgpkey"{% endif %}>
+                    <img src="{{ site.baseurl }}/assets/key.svg" alt="PGP">
+                </a>
             </p>
         </footer>
     </body>

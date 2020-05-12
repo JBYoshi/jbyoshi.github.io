@@ -22,10 +22,11 @@
         {% if jekyll.environment == "development" %}
         <script src="{{ site.baseurl }}/assets/test.js" defer></script>
         {% endif %}
-        {% if page.relme %}
-        <link rel="openid.delegate" href="{{ site.baseurl }}" />
-        <link rel="openid.server" href="https://indieauth.com/openid" />
-        {% endif %}
+        <!--
+            NOTE: site.baseurl is only the path portion (and does not end with a /).
+            site.url is the host. Use both if you need the absolute URL.
+            See https://byparker.com/blog/2014/clearing-up-confusion-around-baseurl/
+        -->
     </head>
     <body>
         <header id="site-header">

@@ -18,10 +18,7 @@
         <link rel="stylesheet" href="{{ site.baseurl }}/{{ site.styleoverride }}">
         {% endif %}
         <link rel="alternate" type="application/rss+xml" href="{{ site.baseurl }}/feed.xml" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        {% if jekyll.environment == "development" %}
-        <script src="{{ site.baseurl }}/assets/test.js" defer></script>
-        {% endif %}
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
         <!--
             NOTE: site.baseurl is only the path portion (and does not end with a /).
             site.url is the host. Use both if you need the absolute URL.
@@ -29,39 +26,46 @@
         -->
     </head>
     <body>
-        <header id="site-header">
-            <h1 class="site-title"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
-            <nav>
-                {% include nav.html %}
-            </nav>
+        <header id="site-header" class="container-outer">
+            <div class="container">
+                <!-- Doing header/outline checks? Use the outline option at https://validator.w3.org/nu/ -->
+                <h1 class="site-title"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
+                <nav>
+                    {% include nav.html %}
+                </nav>
+            </div>
         </header>
-        <main>
-            {{content}}
+        <main class="container-outer">
+            <div class="container">
+                {{content}}
+            </div>
         </main>
-        <footer id="site-footer">
-            <p class="copyright">
-                Copyright &copy; 2015-2020 {{ site.author }}.
-            </p>
-            <p>
-                <a href="https://github.com/JBYoshi" class="social" {% if page.relme %}rel="me"{% endif %}>
-                    <img src="{{ site.baseurl }}/assets/3rdparty/github-white.svg" alt="GitHub">
-                </a>
-                <a href="https://linkedin.com/in/jonathan-browne" class="social" {% if page.relme %}rel="me"{% endif %}>
-                    <img src="{{ site.baseurl }}/assets/3rdparty/linkedin-white.svg" alt="LinkedIn">
-                </a>
-                <a href="https://glitch.com/@JBYoshi" class="social" {% if page.relme %}rel="me"{% endif %}>
-                    <img src="{{ site.baseurl }}/assets/3rdparty/glitch-white.svg" alt="Glitch">
-                </a>
-                <a href="https://keybase.io/jbyoshi" class="social" {% if page.relme %}rel="me"{% endif %}>
-                    <img src="{{ site.baseurl }}/assets/3rdparty/keybase-white.svg" alt="Keybase">
-                </a>
-                <a href="https://discord.gg/sponge" class="social">
-                    <img src="{{ site.baseurl }}/assets/3rdparty/discord-white.svg" alt="Discord">
-                </a>
-                <a href="{{ site.baseurl }}/pgp-key.txt" class="social" {% if page.relme %}rel="pgpkey"{% endif %}>
-                    <img src="{{ site.baseurl }}/assets/key.svg" alt="PGP">
-                </a>
-            </p>
+        <footer id="site-footer" class="container-outer">
+            <div class="container">
+                <p class="copyright">
+                    Copyright &copy; 2015-2020 {{ site.author }}.
+                </p>
+                <p>
+                    <a href="https://github.com/JBYoshi" class="social" {% if page.relme %}rel="me"{% endif %}>
+                        <img src="{{ site.baseurl }}/assets/3rdparty/github-white.svg" alt="GitHub">
+                    </a>
+                    <a href="https://linkedin.com/in/jonathan-browne" class="social" {% if page.relme %}rel="me"{% endif %}>
+                        <img src="{{ site.baseurl }}/assets/3rdparty/linkedin-white.svg" alt="LinkedIn">
+                    </a>
+                    <a href="https://glitch.com/@JBYoshi" class="social" {% if page.relme %}rel="me"{% endif %}>
+                        <img src="{{ site.baseurl }}/assets/3rdparty/glitch-white.svg" alt="Glitch">
+                    </a>
+                    <a href="https://keybase.io/jbyoshi" class="social" {% if page.relme %}rel="me"{% endif %}>
+                        <img src="{{ site.baseurl }}/assets/3rdparty/keybase-white.svg" alt="Keybase">
+                    </a>
+                    <a href="https://discord.gg/sponge" class="social">
+                        <img src="{{ site.baseurl }}/assets/3rdparty/discord-white.svg" alt="Discord">
+                    </a>
+                    <a href="{{ site.baseurl }}/pgp-key.txt" class="social" {% if page.relme %}rel="pgpkey"{% endif %}>
+                        <img src="{{ site.baseurl }}/assets/key.svg" alt="PGP">
+                    </a>
+                </p>
+            </div>
         </footer>
     </body>
 </html>

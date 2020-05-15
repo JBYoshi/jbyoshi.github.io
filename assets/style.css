@@ -2,9 +2,29 @@
 html {background-color: #008900; color: white; font-family: sans-serif;}
 a {color: inherit;}
 header a {text-decoration: none;}
-main {background-color: #94D7F2; color: black;}
-main a {color: hsl(240, 100%, 40%);}
+main {background-color: white; color: black;}
+main a {color: #00c;}
 a:hover, a:focus {text-decoration: underline;}
+
+/* Color experiments - add a class to html to set this */
+html.experiment-1 {background-color: white; color: black;}
+html.experiment-1 a {color: #008900;}
+html.experiment-1 main {background-color: white;}
+html.experiment-1 main a {color: #00c;}
+/* https://codepen.io/sosuke/pen/Pjoqqp - remember the non-black addition (brightness(0) saturate(100%)) */
+html.experiment-1 .social img {filter: brightness(0) saturate(100%) invert(28%) sepia(95%) saturate(1625%) hue-rotate(101deg) brightness(90%) contrast(101%);}
+
+/* Layout experiment - center the main page content vertically */
+main {
+    display: flex;
+    flex-direction: column;
+}
+main>.container {
+    flex-grow: 1;
+}
+.two-column-container {
+    height: 100%;
+}
 
 /* Headers */
 section {
@@ -67,22 +87,26 @@ img {width: 100%; max-width: 100%;}
     #site-header nav {margin-top: 0;}
 
     /* These should only ever be used together. */
-    .right-column {
-        float: right;
-        width: 50%;
-        padding-left: 0.5em;
-        box-sizing: border-box;
+    .two-column-container {
+        display: flex;
+        flex-direction: row;
     }
-
     .left-column {
-        float: left;
         width: 50%;
         padding-right: 0.5em;
         box-sizing: border-box;
+        order: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
-
-    /*
-    If you have trouble with two columns, add "overflow: auto" to the containing element.
-    The container class already handles this.
-    */
+    .right-column {
+        width: 50%;
+        padding-left: 0.5em;
+        box-sizing: border-box;
+        order: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }

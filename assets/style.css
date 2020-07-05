@@ -65,7 +65,7 @@ main {
 /* Header */
 #site-header .container {display: flex; flex-direction: column; align-items: stretch; justify-content: space-between;}
 #site-header h1 {font-size: 2em; margin: 0;}
-#site-header nav {margin: -1em; margin-top: 1em; background-color: #188100; display: flex; flex-direction: row; align-items: center;}
+#site-header nav {margin: -1em; margin-top: 0; display: flex; flex-direction: row; align-items: center;}
 #site-header nav a {margin: 1em;}
 #site-header nav a:not(:last-child) {margin-right: 0;}
 
@@ -86,9 +86,6 @@ img {width: 100%; max-width: 100%;}
     }
     #site-header nav {
         margin-top: -1em;
-    }
-    #site-header nav a {
-        margin: 1.5em;
     }
 
     /* These should only ever be used together. */

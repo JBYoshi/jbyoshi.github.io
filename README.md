@@ -1,3 +1,3 @@
-# [jbyoshi.github.io](https://jbyoshi.github.io)
+# [jonathanb.dev](https://jonathanb.dev)
 
-A website for my GitHub projects.
+My personal website.

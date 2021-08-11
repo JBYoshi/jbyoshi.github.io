@@ -13,10 +13,15 @@
                 {% endif %}
                 {{ site.title }}
         </title>
-        <link rel="stylesheet" href="{{ site.baseurl }}/assets/style.css">
-        {% if site.styleoverride %}
-        <link rel="stylesheet" href="{{ site.baseurl }}/{{ site.styleoverride }}">
+        {% if jekyll.environment == "development" %}
+        <link rel="shortcut icon" type="image/svg+xml" href="{{ site.baseurl }}/assets/jb-gray.svg">
+        <link rel="shortcut icon" type="image/png" href="{{ site.baseurl }}/assets/jb-gray.png">
+        {% else %}
+        <link rel="shortcut icon" type="image/svg+xml" href="{{ site.baseurl }}/assets/jb-green.svg">
+        <link rel="shortcut icon" type="image/png" href="{{ site.baseurl }}/assets/jb-green.png">
         {% endif %}
+        <link rel="stylesheet" href="{{ site.baseurl }}/assets/style.css">
+        <link rel="canonical" href="{{ page.url | absolute_url }}">
         <link rel="alternate" type="application/rss+xml" href="{{ site.baseurl }}/feed.xml" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
         <!--
@@ -43,7 +48,7 @@
         <footer id="site-footer" class="container-outer">
             <div class="container">
                 <p class="copyright">
-                    Copyright &copy; 2015-2020 {{ site.author }}.
+                    Copyright &copy; 2015-{{ 'now' | date: "%Y" }} {{ site.author }}.
                 </p>
                 <p>
                     <a href="https://github.com/JBYoshi" class="social" {% if page.relme %}rel="me"{% endif %}>

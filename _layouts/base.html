@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://analytics.jonathanb.dev;">
         <meta charset="UTF-8">
 
         <title>
@@ -19,6 +19,7 @@
         {% else %}
         <link rel="shortcut icon" type="image/svg+xml" href="{{ site.baseurl }}/assets/jb-green.svg">
         <link rel="shortcut icon" type="image/png" href="{{ site.baseurl }}/assets/jb-green.png">
+        <script async defer src="https://analytics.jonathanb.dev/.knowshi"></script>
         {% endif %}
         <link rel="stylesheet" href="{{ site.baseurl }}/assets/style.css">
         <link rel="canonical" href="{{ page.url | absolute_url }}">

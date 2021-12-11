@@ -21,4 +21,7 @@ permalink: /blog/:year/:month/:day/:title
 title: Jonathan Browne
 author: Jonathan Browne
 jbanalytics: https://analytics.jonathanb.dev
+styles:
+  sizes:
+    column: "(min-width: 1000px) 473px, (min-width: 600px) calc(50vw - 27px), calc(100vw - 36px)"
 exclude: ["Gemfile", "Gemfile.lock", "*.sh", "README.md", "assets/3rdparty/README.txt"]

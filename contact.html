@@ -1,0 +1,51 @@
+---
+layout: base
+relme: true
+---
+
+<div class="two-column-container">
+<div class="left-column">
+    <h1>Contact Me</h1>
+
+    <p>
+        The best way to reach me is through the contact form here. You can also reach me through
+        <a href="https://www.linkedin.com/in/jonathan-browne/">LinkedIn</a>, but I don't generally
+        accept connection requests from people I don't already know.
+    </p>
+
+    <p>
+        Once you fill this out, I'll reply via email within a few days.
+    </p>
+
+    <p>
+        <i>Privacy note: When you submit this form, I'll also save your IP address and browser
+        version to detect spam.</i>
+    </p>
+</div>
+
+<div class="right-column">
+    <script async defer src="/assets/contact.js"></script>
+    <form id="contact-form" data-jbtoolsdomain="{{ site.jbtools }}">
+        <p>
+            <label for="contact-name">Your name:</label>
+            <br>
+            <input id="contact-name" type="text" name="name" required autocomplete="name">
+        </p>
+
+        <p>
+            <label for="contact-email">Your email:</label>
+            <br>
+            <input id="contact-email" type="email" name="email" required>
+        </p>
+        <p>
+            <label for="contact-message">Your message:</label>
+            <br>
+            <textarea id="contact-message" name="message" required></textarea>
+        </p>
+        <p>
+            <button id="contact-submit" type="submit" disabled>Send</button>
+            <span id="contact-status">Loading form...</span>
+        </p>
+    </form>
+</div>
+</div>

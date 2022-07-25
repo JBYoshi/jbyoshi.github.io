@@ -23,7 +23,7 @@ section {
 h1, p {
     margin-top: 0;
 }
-p:last-child {margin-bottom: 0;}
+div.container>p:last-child, div.container>:last-child>p:last-child {margin-bottom: 0;}
 h1 {font-weight: bold; font-size: 2em;}
 h2 {font-weight: bold; font-size: 1.8em;}
 h3 {font-weight: bold; font-size: 1.55em;}
@@ -76,7 +76,8 @@ a.social {display: inline-block; text-decoration: none !important; margin-left: 
 .social img {width: 24px; height: 24px;}
 img {width: 100%; max-width: 100%; height: auto;}
 input, button, select, textarea {font-size: 100%; font: inherit;}
-textarea {width: 100%; box-sizing: border-box; height: 100vh; resize: none;}
+input {width: 20em;}
+textarea {width: 100%; box-sizing: border-box; height: 10em; resize: none;}
 
 /* Desktop */
 @media screen and (min-width:600px) {

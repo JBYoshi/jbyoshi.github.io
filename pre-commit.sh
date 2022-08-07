@@ -6,8 +6,7 @@ if gpg --list-secret-keys --with-colons | grep -i ^fpr:.*:$MY_PGP_KEY: > /dev/nu
 then
     if ! gpg --armor --export $MY_PGP_KEY | cmp --silent pgp-key.txt
     then
-        echo ERROR: PGP key has been changed. Run the following command to update the local copy:
-        echo gpg --armor --export $MY_PGP_KEY ">" pgp-key.txt
+        echo ERROR: PGP key has been changed. Run submit-gpg-key.sh to update.
         exit 1
     fi
 fi

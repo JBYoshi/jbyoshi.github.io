@@ -8,4 +8,10 @@ gpg --keyserver hkp://keys.openpgp.org --send-keys $MY_PGP_KEY
 keybase pgp update
 
 gpg --armor --export $MY_PGP_KEY > `dirname $0`/pgp-key.txt
-echo "Commit and push pgp-key.txt to finish"
+gpg --armor --export $MY_PGP_KEY | pbcopy
+
+echo "The automatic steps are done. Manual steps:"
+echo "- Replace the GPG key on the following sites (it's copied to the clipboard):"
+echo "  - https://github.com/settings/keys"
+echo "  - https://gitlab.com/-/profile/gpg_keys"
+echo "- Commit and push pgp-key.txt"

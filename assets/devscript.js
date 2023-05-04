@@ -14,7 +14,7 @@ function checkImageSizes() {
             for (let size of sizes.split(",").map(x => x.trim())) {
                 if (size.startsWith("(")) {
                     let [_, query, thisValue] = /^(\([^\)\(]*\))(.*)/.exec(size);
-                    console.log(query, "->", thisValue);
+                    //console.log(query, "->", thisValue);
                     if (!value && window.matchMedia(query).matches) {
                         value = thisValue;
                     }
@@ -43,7 +43,7 @@ function checkImageSizes() {
 
             let currentWidth = image.clientWidth;
 
-            console.log(currentWidth, evaluatedWidth);
+            console.log(currentWidth, evaluatedWidth, "disp = " + currentWidth * devicePixelRatio);
             if (Math.abs(currentWidth - evaluatedWidth) > 1) {
                 console.error("Mismatch: actual width is " + currentWidth + ", but sizes has " + value + " -> " + evaluatedWidth + "px");
                 image.style.border = "10px solid red";

@@ -23,5 +23,5 @@ author: Jonathan Browne
 jbtools: https://tools.jonathanb.dev
 styles:
   sizes:
-    column: "(min-width: 1000px) 473px, (min-width: 600px) calc(50vw - 27px), calc(100vw - 36px)"
+    column: "(min-width: 1200px) 573px, (min-width: 600px) calc(50vw - 27px), calc(100vw - 36px)"
 exclude: ["Gemfile", "Gemfile.lock", "*.sh", "README.md", "assets/3rdparty/README.txt"]

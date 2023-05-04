@@ -1,7 +1,8 @@
 /* Colors */
-html {background-color: #1ba100; color: white; font-family: sans-serif;}
+html {background-color: #1ba100; color: white; font-family: sans-serif; font-size: 18px; line-height: 1.5;}
 a {color: inherit;}
 header a {text-decoration: none;}
+header h1 {line-height: 1.2;}
 main {background-color: white; color: black; overflow: auto;}
 main a {color: #006aff;}
 a:hover, a:focus {text-decoration: underline;}
@@ -52,7 +53,7 @@ main {
 }
 .container {
     box-sizing: border-box;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 18px;
 }
@@ -72,12 +73,17 @@ footer {text-align: center;}
 /* Misc styles used on various pages */
 .post-title {margin-bottom: 0;}
 .copyright {font-size: 0.7em;}
-a.social {display: inline-block; text-decoration: none !important; margin-left: 6px; margin-right: 6px;}
-.social img {width: 24px; height: 24px;}
+a.social {display: inline-block; text-decoration: none !important; margin-left: 10px; margin-right: 10px;}
+.social img {width: 32px; height: 32px;}
 img {width: 100%; max-width: 100%; height: auto;}
 input, button, select, textarea {font-size: 100%; font: inherit;}
 input {width: 20em;}
 textarea {width: 100%; box-sizing: border-box; height: 10em; resize: none;}
+.programming-languages {display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; text-align: center;}
+.programming-languages img, .programming-languages picture {width: 100%; aspect-ratio: 1; object-fit: contain;}
+.programming-languages img {padding-bottom: 10px;}
+.programming-languages picture img {display: block; /* fixes weird spacing stuff */}
+.programming-languages>div {width: 72px; object-fit: contain; margin: 18px; display: flex; flex-direction: column; align-items: center; font-size: 80%;}
 
 /* Desktop */
 @media screen and (min-width:600px) {
@@ -92,7 +98,12 @@ textarea {width: 100%; box-sizing: border-box; height: 10em; resize: none;}
     .two-column-container {
         display: flex;
         flex-direction: row;
-        height: 100%;
+        align-items: top;
+    }
+    .two-column-container-middle {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
     }
     .left-column {
         width: 50%;

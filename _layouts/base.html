@@ -23,6 +23,11 @@
         {% endif %}
         {% if site.jbtools != "" %}
         <script async defer src="{{ site.jbtools }}/a.js"></script>
+        {% if page.relme %}
+        <link rel="indieauth-metadata" href="{{ site.jbtools }}/.well-known/openid-configuration">
+        <link rel="authorization_endpoint" href="{{ site.jbtools }}/auth/oidc">
+        <link rel="token_endpoint" href="{{ site.jbtools }}/auth/oidc/token">
+        {% endif %}
         {% endif %}
         <link rel="stylesheet" href="{{ site.baseurl }}/assets/style.css">
         <link rel="canonical" href="{{ page.url | absolute_url }}">

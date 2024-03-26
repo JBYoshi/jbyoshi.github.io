@@ -83,7 +83,7 @@ textarea {width: 100%; box-sizing: border-box; height: 10em; resize: none;}
 .programming-languages img, .programming-languages picture {width: 100%; aspect-ratio: 1; object-fit: contain;}
 .programming-languages img {padding-bottom: 10px;}
 .programming-languages picture img {display: block; /* fixes weird spacing stuff */}
-.programming-languages>div {width: 72px; object-fit: contain; margin: 18px; display: flex; flex-direction: column; align-items: center; font-size: 80%;}
+.programming-languages>div {width: 80px; object-fit: contain; margin: 18px; display: flex; flex-direction: column; align-items: center; font-size: 80%;}
 
 /* Desktop */
 @media screen and (min-width:600px) {

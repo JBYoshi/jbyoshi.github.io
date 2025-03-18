@@ -84,7 +84,8 @@ textarea {width: 100%; box-sizing: border-box; height: 10em; resize: none;}
 .programming-languages img {padding-bottom: 10px;}
 .programming-languages picture img {display: block; /* fixes weird spacing stuff */}
 .programming-languages>div {width: 80px; object-fit: contain; margin: 18px; display: flex; flex-direction: column; align-items: center; font-size: 80%;}
-.project-list-item>img {width: 80px; max-height: 80px; object-fit: contain;}
+.project-list-item img, .project-list-item picture {width: 80px; width: 80px; max-height: 80px; object-fit: contain;}
+.project-list-item picture img {display: block; /* fixes weird spacing stuff */}
 .project-list-item>:last-child, .project-list-item>:last-child>:last-child {margin-bottom: 0; padding-bottom: 0;}
 .project-list-item {margin-bottom: 1em;}
 
@@ -134,7 +135,7 @@ textarea {width: 100%; box-sizing: border-box; height: 10em; resize: none;}
         display: flex;
         flex-direction: row;
     }
-    .project-list-item>img {
+    .project-list-item picture, .project-list-item img {
         min-width: 80px;
         padding-right: 20px;
     }
